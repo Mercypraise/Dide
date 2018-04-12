@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/help_lines"
+            android:icon="@drawable/helplines"
+            android:title="Help lines" />
+        <item
+            android:id="@+id/about_dide"
+            android:title="About Dide" />
+        <item
+            android:id="@+id/about_us"
+            android:title="About Us" />
+        <item
+            android:id="@+id/our_values"
+            android:title="Our values" />
+    </group>
+
+</menu>
