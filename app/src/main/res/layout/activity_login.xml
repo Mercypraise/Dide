@@ -32,7 +32,7 @@
                 app:cardCornerRadius="30dp">
 
                 <EditText
-                    android:id="@+id/email"
+                    android:id="@+id/emailText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:backgroundTint="@android:color/transparent"
@@ -67,7 +67,7 @@
                 app:cardCornerRadius="30dp">
 
                 <EditText
-                    android:id="@+id/password"
+                    android:id="@+id/passwordText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:backgroundTint="@android:color/transparent"
@@ -136,4 +136,12 @@
         android:layout_marginBottom="22dp"
         android:text="Don't have an account, sign up"
         android:textColor="#cd830e" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        android:visibility="gone"/>
+
 </RelativeLayout>
