@@ -25,7 +25,9 @@
         <activity
             android:name=".TwinActivity"
             android:label="@string/title_activity_twin"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme">
+
+        </activity>
     </application>
 
 </manifest>

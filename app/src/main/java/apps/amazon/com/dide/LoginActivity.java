@@ -2,7 +2,6 @@ package apps.amazon.com.dide;
 
 import android.content.Intent;
 import android.os.CountDownTimer;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,16 +9,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-
 public class LoginActivity extends AppCompatActivity{
 
 
     int ex = 0;
-    FirebaseAuth mAuth;
+//    FirebaseAuth mAuth;
     EditText email, password;
     TextView login;
 
@@ -28,7 +22,7 @@ public class LoginActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        mAuth = FirebaseAuth.getInstance();
+//        mAuth = FirebaseAuth.getInstance();
 
         email = findViewById(R.id.emailText);
         password = findViewById(R.id.passwordText);
@@ -46,15 +40,15 @@ public class LoginActivity extends AppCompatActivity{
                 }
                 else{
                     findViewById(R.id.progressBar).setVisibility(View.VISIBLE);
-                    mAuth.signInWithEmailAndPassword(email.getText().toString().trim(), password.getText().toString().trim()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task){
-                            if(task.isSuccessful()){
-                                findViewById(R.id.progressBar).setVisibility(View.GONE);
-                                //Some shii
-                            }
-                        }
-                    });
+//                    mAuth.signInWithEmailAndPassword(email.getText().toString().trim(), password.getText().toString().trim()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                        @Override
+//                        public void onComplete(@NonNull Task<AuthResult> task){
+//                            if(task.isSuccessful()){
+//                                findViewById(R.id.progressBar).setVisibility(View.GONE);
+//                                //Some shii
+//                            }
+//                        }
+//                    });
                 }
             }
         });
