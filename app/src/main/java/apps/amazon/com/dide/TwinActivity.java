@@ -1,6 +1,7 @@
 package apps.amazon.com.dide;
 
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -10,8 +11,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class TwinActivity extends AppCompatActivity{
@@ -26,13 +27,14 @@ public class TwinActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_twin);
 
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        ArrayList<Fragment> list = new ArrayList<>();
+        list.add(new EmergencyFragment());
+        list.add(new MotivationFragment());
 
-        // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), list, getApplicationContext());
+
+        mViewPager = findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-
-
 
     }
 
@@ -44,10 +46,11 @@ public class TwinActivity extends AppCompatActivity{
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         public PlaceholderFragment(){
+
         }
 
 
-        public static PlaceholderFragment newInstance(int sectionNumber) {
+        public static PlaceholderFragment newInstance(int sectionNumber){
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
@@ -57,30 +60,39 @@ public class TwinActivity extends AppCompatActivity{
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-            View rootView = inflater.inflate(R.layout.fragment_emergency, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+            View rootView = inflater.inflate(R.layout.fragment_container, container, false);
             return rootView;
         }
     }
 
 
 
-
     public class SectionsPagerAdapter extends FragmentPagerAdapter{
 
-        public SectionsPagerAdapter(FragmentManager fm) {
+        private List<Fragment> allFragments;
+        private Context context;
+
+
+        public SectionsPagerAdapter(FragmentManager fm, List<Fragment> allFragments, Context context){
             super(fm);
+            this.allFragments = allFragments;
+            this.context = context;
         }
 
         @Override
         public Fragment getItem(int position){
-            return PlaceholderFragment.newInstance(position + 1);
+            return allFragments.get(position);
         }
 
         @Override
         public int getCount(){
-            return 2;
+            return allFragments.size();
         }
+    }
+
+
+    @Override
+    public void onBackPressed(){
+
     }
 }
