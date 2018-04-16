@@ -1,14 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fcffe8"
     tools:context=".EmergencyFragment">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/lin"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/emergency"
+            android:layout_width="210dp"
+            android:layout_height="210dp"
+            android:elevation="10dp"
+            android:src="@drawable/trumpet"
+            app:civ_border_color="#2b98bf"
+            app:civ_border_width="1dp"
+            app:civ_circle_background_color="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emergency"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:fontFamily="casual"
+            android:text="EMERGENCY??!!"
+            android:textColor="#000000"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Emergency" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="56dp"
+        android:text="Swipe to proceed to main app >>"
+        android:textSize="21sp"
+        android:textStyle="bold" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/lin"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/dog"
+        app:civ_circle_background_color="#711510" />
 
 </RelativeLayout>

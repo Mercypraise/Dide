@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.jgabrielfreitas.core.BlurImageView;
 
 
 public class EmergencyFragment extends Fragment{
@@ -26,6 +27,8 @@ public class EmergencyFragment extends Fragment{
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
+
+        ((BlurImageView) getView().findViewById(R.id.attackImage)).setBlur(10);
 
 
     }
