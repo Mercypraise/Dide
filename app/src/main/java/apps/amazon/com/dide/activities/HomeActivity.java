@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import apps.amazon.com.dide.R;
 
@@ -46,6 +47,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         else{
             switch(ex){
                 case 0:
+                    Toast.makeText(getApplicationContext(), "Press back again to exit", Toast.LENGTH_LONG).show();
                     ex++;
                     new CountDownTimer(3000, 1000){
                         @Override
