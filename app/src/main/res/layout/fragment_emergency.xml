@@ -45,6 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:textColor="#e1440c79"
         android:layout_marginBottom="56dp"
         android:text="Swipe to proceed to main app >>"
         android:textSize="21sp"

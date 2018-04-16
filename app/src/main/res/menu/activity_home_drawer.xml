@@ -3,20 +3,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/help_lines"
-            android:icon="@drawable/helplines"
-            android:title="Help lines" />
-        <item
-            android:id="@+id/about_dide"
-            android:title="About Dide" />
-        <item
-            android:id="@+id/about_us"
-            android:title="About Us" />
-        <item
-            android:id="@+id/our_values"
-            android:title="Our values" />
-    </group>
+
+    <item
+        android:title="Profile"
+        android:icon="@drawable/profile"
+        android:id="@+id/profile" />
+
+
+    <item android:title="Communication">
+        <menu>
+            <item
+                android:id="@+id/stories"
+                android:icon="@drawable/stories"
+                android:title="Stories" />
+            <item
+                android:id="@+id/chats"
+                android:icon="@drawable/chats"
+                android:title="Chats" />
+            <item
+                android:id="@+id/trivia"
+                android:title="Trivia"
+                android:icon="@drawable/trivia"/>
+        </menu>
+    </item>
+
+
+    <item android:title="Other">
+        <menu>
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/about"
+                android:title="About" />
+            <item
+                android:id="@+id/nav_rate"
+                android:icon="@drawable/rate"
+                android:title="Rate" />
+            <item
+                android:id="@+id/donate"
+                android:icon="@drawable/donate"
+                android:title="Donate"
+                />
+        </menu>
+    </item>
 
 </menu>
