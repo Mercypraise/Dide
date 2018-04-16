@@ -6,14 +6,24 @@
     tools:context=".MotivationFragment">
 
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Some quote"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginBottom="38dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:background="#e1440c79"
         android:fontFamily="casual"
         android:text="Proceed to app"
+        android:id="@+id/btn_proceed"
         android:textAllCaps="false"
         android:textSize="27sp"
         android:textStyle="bold" />
