@@ -1,4 +1,4 @@
-package apps.amazon.com.dide;
+package apps.amazon.com.dide.activities;
 
 
 import android.content.Context;
@@ -13,6 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
+
+import apps.amazon.com.dide.R;
+import apps.amazon.com.dide.fragments.EmergencyFragment;
+import apps.amazon.com.dide.fragments.MotivationFragment;
 
 
 public class TwinActivity extends AppCompatActivity{

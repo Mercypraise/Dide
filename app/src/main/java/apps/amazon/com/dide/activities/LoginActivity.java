@@ -1,4 +1,4 @@
-package apps.amazon.com.dide;
+package apps.amazon.com.dide.activities;
 
 import android.content.Intent;
 import android.os.CountDownTimer;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import apps.amazon.com.dide.R;
 
 public class LoginActivity extends AppCompatActivity{
 

@@ -1,4 +1,4 @@
-package apps.amazon.com.dide;
+package apps.amazon.com.dide.fragments;
 
 
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.jgabrielfreitas.core.BlurImageView;
+
+import apps.amazon.com.dide.R;
 
 
 public class EmergencyFragment extends Fragment{

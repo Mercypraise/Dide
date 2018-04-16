@@ -1,10 +1,12 @@
-package apps.amazon.com.dide;
+package apps.amazon.com.dide.activities;
 
 
 import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import apps.amazon.com.dide.R;
 
 public class SplashActivity extends AppCompatActivity{
 

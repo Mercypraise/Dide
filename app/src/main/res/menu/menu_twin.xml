@@ -1,6 +1,6 @@
 <menu
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="apps.amazon.com.dide.TwinActivity">
+    tools:context="apps.amazon.com.dide.activities.TwinActivity">
 
 
 </menu>
