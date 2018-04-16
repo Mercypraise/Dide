@@ -8,12 +8,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+
+import java.util.Random;
 
 import apps.amazon.com.dide.activities.HomeActivity;
 import apps.amazon.com.dide.R;
 
 
-public class MotivationFragment extends Fragment {
+public class MotivationFragment extends Fragment{
 
 
     public MotivationFragment(){
@@ -36,6 +39,22 @@ public class MotivationFragment extends Fragment {
                 startActivity(new Intent(getActivity().getApplicationContext(), HomeActivity.class));
             }
         });
+
+
+
+        int[] quotes = {R.drawable.b0, R.drawable.b1, R.drawable.b2, R.drawable.b3, R.drawable.b4, R.drawable.b5,
+                        R.drawable.b6, R.drawable.b7, R.drawable.b8, R.drawable.b9, R.drawable.b10,
+                        R.drawable.b11, R.drawable.b12, R.drawable.b13, R.drawable.b14, R.drawable.b15,
+                        R.drawable.b16, R.drawable.b17, R.drawable.b18, R.drawable.b19, R.drawable.b20,
+                        R.drawable.b21, R.drawable.b22, R.drawable.b23, R.drawable.b24, R.drawable.b25,
+                        R.drawable.b26, R.drawable.b27, R.drawable.b28, R.drawable.b29, R.drawable.b30,
+                        R.drawable.b31, R.drawable.b32, R.drawable.b33, R.drawable.b34, R.drawable.b35,
+                        R.drawable.b36};
+
+        Random random = new Random();
+        int rand = random.nextInt(37);
+
+        ((ImageView) getView().findViewById(R.id.imageHolder)).setImageResource(quotes[rand]);
 
     }
 }

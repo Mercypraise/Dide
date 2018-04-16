@@ -15,7 +15,6 @@ public class LoginActivity extends AppCompatActivity{
 
 
     int ex = 0;
-//    FirebaseAuth mAuth;
     EditText email, password;
     TextView login;
 
@@ -23,8 +22,6 @@ public class LoginActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-//        mAuth = FirebaseAuth.getInstance();
 
         email = findViewById(R.id.emailText);
         password = findViewById(R.id.passwordText);
