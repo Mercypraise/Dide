@@ -14,13 +14,9 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/taiwo"
-            android:id="@+id/blurer"
-            android:alpha="0.8"
-            android:scaleType="fitXY"/>
-
+            android:scaleType="fitXY"
+            android:src="@drawable/bbb"/>
     </FrameLayout>
-
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"

@@ -28,16 +28,16 @@ public class SplashActivity extends AppCompatActivity{
         setContentView(R.layout.activity_splash);
 
 
-        new CountDownTimer(2000, 1000){
+        new CountDownTimer(1500, 1000){
             @Override
-            public void onTick(long millisUntilFinished) {
+            public void onTick(long millisUntilFinished){
 
             }
 
             @Override
             public void onFinish() {
-                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(findViewById(R.id.image), View.ALPHA, 1.0f, 0.0f);
-                objectAnimator.setDuration(1500).addListener(new AnimatorListenerAdapter(){
+                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(findViewById(R.id.image), View.ALPHA, 1.0f, 0.7f);
+                objectAnimator.setDuration(1000).addListener(new AnimatorListenerAdapter(){
 
                     @Override
                     public void onAnimationEnd(Animator animation){

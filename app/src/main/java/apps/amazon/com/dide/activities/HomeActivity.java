@@ -34,6 +34,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        overridePendingTransition(0, 0);
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -133,6 +135,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             fragmentTransaction.replace(R.id.cont, new ProfileFragment());
             fragmentTransaction.commit();
 
+            getSupportActionBar().setTitle("Profile");
+
             DrawerLayout drawer = findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
         }
@@ -144,6 +148,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
             DrawerLayout drawer = findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
+
+            getSupportActionBar().setTitle("Stories");
         }
 
         else if(id == R.id.trivia){
@@ -153,6 +159,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
             DrawerLayout drawer = findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
+
+            getSupportActionBar().setTitle("Trivia");
         }
 
         else if(id == R.id.donate){
