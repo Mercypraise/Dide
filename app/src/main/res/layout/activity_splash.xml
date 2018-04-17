@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#666666"
     tools:context=".activities.SplashActivity">
 
 
@@ -10,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/splash"
+        android:id="@+id/image"
         android:scaleType="fitXY"/>
 
 

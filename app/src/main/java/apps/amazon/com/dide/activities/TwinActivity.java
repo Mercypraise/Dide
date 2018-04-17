@@ -31,6 +31,8 @@ public class TwinActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_twin);
 
+        overridePendingTransition(0, 0);
+
         ArrayList<Fragment> list = new ArrayList<>();
         list.add(new EmergencyFragment());
         list.add(new MotivationFragment());

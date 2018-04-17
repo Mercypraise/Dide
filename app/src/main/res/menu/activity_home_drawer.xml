@@ -6,8 +6,8 @@
 
     <item
         android:title="Profile"
-        android:icon="@drawable/profile"
-        android:id="@+id/profile" />
+        android:id="@+id/profile"
+        android:icon="@drawable/profile"/>
 
 
     <item android:title="Communication">
@@ -16,10 +16,6 @@
                 android:id="@+id/stories"
                 android:icon="@drawable/stories"
                 android:title="Stories" />
-            <item
-                android:id="@+id/chats"
-                android:icon="@drawable/chats"
-                android:title="Chats" />
             <item
                 android:id="@+id/trivia"
                 android:title="Trivia"
@@ -35,14 +31,17 @@
                 android:icon="@drawable/about"
                 android:title="About" />
             <item
+                android:id="@+id/faq"
+                android:icon="@drawable/faq"
+                android:title="FAQ"/>
+            <item
                 android:id="@+id/nav_rate"
                 android:icon="@drawable/rate"
                 android:title="Rate" />
             <item
                 android:id="@+id/donate"
                 android:icon="@drawable/donate"
-                android:title="Donate"
-                />
+                android:title="Donate" />
         </menu>
     </item>
 

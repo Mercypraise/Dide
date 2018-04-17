@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 27
-    defaultConfig{
+    defaultConfig {
         applicationId "apps.amazon.com.dide"
         minSdkVersion 19
         targetSdkVersion 27
@@ -32,4 +32,3 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 }
-

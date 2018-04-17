@@ -23,7 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="url" value="jar:file:/home/taslim/android-studio/plugins/android/lib/android.jar!/images/material_design_icons/hardware/ic_videogame_asset_black_24dp.xml" />
+                                                <entry key="url" value="jar:file:/home/taslim/android-studio/plugins/android/lib/android.jar!/images/material_design_icons/alert/ic_error_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -33,7 +33,9 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="trivia" />
+                                      <entry key="outputName" value="butguy" />
+                                      <entry key="theme" value="CUSTOM" />
+                                      <entry key="themeColor" value="0018e5" />
                                     </map>
                                   </option>
                                 </PersistentState>

@@ -3,61 +3,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fcffe8"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.EmergencyFragment">
 
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <!--<LinearLayout-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_centerInParent="true"-->
-            <!--android:orientation="vertical">-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/taiwo"
+            android:id="@+id/blurer"
+            android:alpha="0.8"
+            android:scaleType="fitXY"/>
 
-            <!--<de.hdodenhof.circleimageview.CircleImageView-->
-                <!--android:id="@+id/emergency"-->
-                <!--android:layout_width="210dp"-->
-                <!--android:layout_height="210dp"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:src="@drawable/tap" />-->
-
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:paddingStart="10dp"-->
-                <!--android:paddingEnd="10dp"-->
-                <!--android:fontFamily="casual"-->
-                <!--android:textAlignment="center"-->
-                <!--android:text="Rapidly tap 5 times on any screen to summon emergency"-->
-                <!--android:textColor="#000000"-->
-                <!--android:textSize="18sp"-->
-                <!--android:textStyle="bold" />-->
-        <!--</LinearLayout>-->
+    </FrameLayout>
 
 
-
-    <TextView
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="#e1440c79"
-        android:layout_marginBottom="56dp"
-        android:text="Swipe to proceed to main app >>"
-        android:textSize="21sp"
-        android:textStyle="bold" />
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_centerInParent="true"
+        app:cardBackgroundColor="@android:color/holo_red_light"
+        app:cardCornerRadius="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/butguy"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="7dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In case of an attack, rapidly tap the screen five or more times."
+                android:fontFamily="casual"
+                android:paddingTop="5dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="13dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+        </LinearLayout>
 
 
-    <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:layout_marginTop="58dp"-->
-        <!--android:text="important!"-->
-        <!--android:textColor="@android:color/holo_red_dark"-->
-        <!--android:textStyle="bold"-->
-        <!--android:textAllCaps="true"-->
-        <!--android:textSize="35sp" />-->
+    </android.support.v7.widget.CardView>
+
 </RelativeLayout>
