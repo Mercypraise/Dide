@@ -9,21 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.SplashActivity">
+        <activity android:name=".activities.SplashActivity"
+                  android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.LoginActivity" />
-        <activity android:name=".activities.SignupActivity" />
+        <activity android:name=".activities.LoginActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".activities.SignupActivity"
+                  android:screenOrientation="portrait"/>
+
         <activity
             android:name=".activities.HomeActivity"
             android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
+
         <activity
             android:name=".activities.TwinActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_twin"
             android:theme="@style/AppTheme">
 
