@@ -24,6 +24,6 @@
         android:layout_marginEnd="31dp"
         android:scaleType="centerCrop"
         android:src="@drawable/next"
-        app:backgroundTint="@android:color/holo_red_dark" />
+        app:backgroundTint="@android:color/holo_purple" />
 
 </RelativeLayout>
