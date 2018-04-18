@@ -16,6 +16,7 @@
             android:layout_height="match_parent"
             android:scaleType="fitXY"
             android:alpha="0.6"
+            android:id="@+id/img"
             android:src="@drawable/bbb"/>
     </FrameLayout>
 

@@ -3,8 +3,14 @@ package apps.amazon.com.dide.activities;
 
 import android.content.Intent;
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewConfiguration;
+import android.widget.Toast;
+
 import apps.amazon.com.dide.R;
 
 
@@ -25,25 +31,53 @@ public class SplashActivity extends AppCompatActivity{
 
             @Override
             public void onFinish(){
-//                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(findViewById(R.id.image), View.ALPHA, 1.0f, 0.7f);
-//                objectAnimator.setDuration(1000).addListener(new AnimatorListenerAdapter(){
-//
-//                    @Override
-//                    public void onAnimationEnd(Animator animation){
-//                        Log.d("CHECK", "got here");
-//                        startActivity(new Intent(getApplicationContext(), TwinActivity.class));
-//                    }
-//
-//                    @Override
-//                    public void onAnimationResume(Animator animation) {
-//                        onFinish();
-//                    }
-//
-//                });
-//
-//                objectAnimator.start();
                 startActivity(new Intent(getApplicationContext(), TwinActivity.class));
             }
         }.start();
+
+        findViewById(R.id.image).setOnTouchListener(new View.OnTouchListener() {
+            Handler handler = new Handler();
+
+            int numberOfTaps = 0;
+            long lastTapTimeMs = 0;
+            long touchDownMs = 0;
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        touchDownMs = System.currentTimeMillis();
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        handler.removeCallbacksAndMessages(null);
+
+                        if((System.currentTimeMillis() - touchDownMs) > ViewConfiguration.getTapTimeout()){
+
+                            numberOfTaps = 0;
+                            lastTapTimeMs = 0;
+                            break;
+                        }
+
+                        if(numberOfTaps > 0 && (System.currentTimeMillis() - lastTapTimeMs) < ViewConfiguration.getDoubleTapTimeout()) {
+                            numberOfTaps += 1;
+
+                        }
+
+                        else{
+                            numberOfTaps = 1;
+                        }
+
+                        lastTapTimeMs = System.currentTimeMillis();
+
+                        if (numberOfTaps == 4) {
+                            Toast.makeText(getApplicationContext(), "four taps o", Toast.LENGTH_SHORT).show();
+                            //go to emergency
+                        }
+                }
+
+                return true;
+            }
+        });
     }
 }
