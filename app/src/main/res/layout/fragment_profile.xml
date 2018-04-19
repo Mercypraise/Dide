@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/root"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".navFragments.ProfileFragment">
 
@@ -20,144 +21,234 @@
             android:layout_alignParentTop="true"
             android:layout_marginEnd="24dp"
             android:layout_marginTop="24dp"
-            android:src="@drawable/female"
+            android:src="@drawable/male"
             app:civ_border_color="#000000"
             app:civ_border_width="2dp"
             app:civ_circle_background_color="#f5ffe2" />
     </RelativeLayout>
 
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/relic"
-        android:paddingTop="20dp"
-        android:background="#fffae6"
-        android:orientation="vertical">
+        android:layout_below="@+id/relic">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp">
+            android:layout_height="wrap_content"
+            android:background="#fffae6"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/na"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="15dp"
-                android:gravity="start|top"
-                android:text="Name"
-                android:textColor="@android:color/holo_red_dark"
-                android:textSize="15sp"
-                android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/na"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="casual"
-                android:text="Oseni Taslim"
-                android:textColor="#000000"
-                android:textSize="28sp" />
-        </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/holo_purple">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="30dp">
-
-            <TextView
-                android:id="@+id/em"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="15dp"
-                android:gravity="start|top"
-                android:text="Gender"
-                android:textColor="@android:color/holo_red_dark"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <RadioButton
+                <TextView
+                    android:id="@+id/en"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Male" />
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="start|top"
+                    android:text="Emergency Number"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
-                <RadioButton
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/en">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="casual"
+                        android:text="+2347061979046"
+                        android:layout_centerInParent="true"
+                        android:textColor="#060b35"
+                        android:textSize="20sp" />
+
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="40dp"
+                        android:background="@android:color/holo_purple"
+                        android:src="@drawable/edit" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/na"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="25dp"
-                    android:text="Female" />
-            </LinearLayout>
-        </RelativeLayout>
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:gravity="start|top"
+                    android:text="Display name"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/na"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="casual"
+                    android:id="@+id/name"
+                    android:text="Oseni Taslim"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/editDisplayName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="start|top"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/name"
+                    android:text="Edit"
+                    android:textColor="#141db9"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
 
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="30dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp">
 
-            <TextView
-                android:id="@+id/pn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="15dp"
-                android:gravity="start|top"
-                android:text="Emergency number"
-                android:textColor="@android:color/holo_red_dark"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/em"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:gravity="start|top"
+                    android:text="Email"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/pn"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="casual"
-                android:text="+2347061979046"
-                android:textColor="#000000"
-                android:textSize="28sp" />
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/em"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="casual"
+                    android:id="@+id/email"
+                    android:text="tasleemoseni@gmail.com"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="30dp">
+                <TextView
+                    android:id="@+id/editEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="start|top"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/email"
+                    android:text="Edit"
+                    android:textColor="#141db9"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/lc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="15dp"
-                android:gravity="start|top"
-                android:text="Location"
-                android:textColor="@android:color/holo_red_dark"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+            </RelativeLayout>
 
-            <Spinner
-                android:id="@+id/countries"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/lc"
-                android:layout_centerHorizontal="true">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp">
 
-            </Spinner>
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/gd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:gravity="start|top"
+                    android:text="Gender"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/gd"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="casual"
+                    android:text="male"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+            </RelativeLayout>
 
 
-    </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:id="@+id/pn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:gravity="start|top"
+                    android:text="Phone number"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/pn"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="casual"
+                    android:text="+2347061979046"
+                    android:textColor="#000000"
+                    android:id="@+id/phoneNumber"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/editPhoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="start|top"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/phoneNumber"
+                    android:text="Edit"
+                    android:textColor="#141db9"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
 
 
 </RelativeLayout>

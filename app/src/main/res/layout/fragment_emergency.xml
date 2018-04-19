@@ -26,7 +26,7 @@
         android:layout_centerInParent="true"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
-        app:cardBackgroundColor="#ffa544"
+        app:cardBackgroundColor="#ffffff"
         app:cardCornerRadius="30dp"
         app:cardElevation="30dp">
 
@@ -70,7 +70,7 @@
         android:textStyle="bold"
         android:layout_marginBottom="29dp"
         android:text="Swipe right to continue >>"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="30sp" />
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="23sp" />
 
 </RelativeLayout>

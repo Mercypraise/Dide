@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 import apps.amazon.com.dide.R;
 import apps.amazon.com.dide.navFragments.AboutFragment;
+import apps.amazon.com.dide.navFragments.HomeFragment;
 import apps.amazon.com.dide.navFragments.ProfileFragment;
 import apps.amazon.com.dide.navFragments.StoriesFragment;
 import apps.amazon.com.dide.navFragments.TriviaFragment;
@@ -41,6 +42,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.cont, new HomeFragment(), "home");
+        fragmentTransaction.commit();
+
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
@@ -53,29 +58,39 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             drawer.closeDrawer(GravityCompat.START);
         }
 
-        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-//        else{
-//            switch(ex){
-//                case 0:
-//                    Toast.makeText(getApplicationContext(), "Press back again to exit", Toast.LENGTH_LONG).show();
-//                    ex++;
-//                    new CountDownTimer(3000, 1000){
-//                        @Override
-//                        public void onTick(long millisUntilFinished) {
-//
-//                        }
-//
-//                        @Override
-//                        public void onFinish() {
-//                            ex = 0;
-//                        }
-//                    }.start();
-//                    break;
-//                case 1:
-//                    startActivity(new Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_HOME).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
-//                    break;
-//            }
-//        }
+        else{
+            HomeFragment homeFragment = (HomeFragment) getFragmentManager().findFragmentByTag("home");
+
+            if(homeFragment != null && homeFragment.isVisible()){
+                switch(ex){
+                    case 0:
+                        Toast.makeText(getApplicationContext(), "Press back again to exit", Toast.LENGTH_LONG).show();
+                        ex++;
+                        new CountDownTimer(3000, 1000){
+                            @Override
+                            public void onTick(long millisUntilFinished) {
+
+                            }
+
+                            @Override
+                            public void onFinish() {
+                                ex = 0;
+                            }
+                        }.start();
+                        break;
+                    case 1:
+                        startActivity(new Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_HOME).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                        break;
+                }
+            }
+
+            else{
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.cont, new HomeFragment(), "home");
+                fragmentTransaction.commit();
+                getSupportActionBar().setTitle("Home");
+            }
+        }
     }
 
     @Override
@@ -102,8 +117,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         if(id == R.id.nav_about){
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.cont, new AboutFragment());
+            fragmentTransaction.replace(R.id.cont, new AboutFragment(), "about");
             fragmentTransaction.commit();
+
+            getSupportActionBar().setTitle("About");
 
             DrawerLayout drawer = findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
@@ -132,7 +149,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         else if(id == R.id.profile){
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.cont, new ProfileFragment());
+            fragmentTransaction.replace(R.id.cont, new ProfileFragment(), "profile");
             fragmentTransaction.commit();
 
             getSupportActionBar().setTitle("Profile");
@@ -143,7 +160,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         else if(id == R.id.stories){
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.cont, new StoriesFragment());
+            fragmentTransaction.replace(R.id.cont, new StoriesFragment(), "stories");
             fragmentTransaction.commit();
 
             DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -154,7 +171,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         else if(id == R.id.trivia){
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.cont, new TriviaFragment());
+            fragmentTransaction.replace(R.id.cont, new TriviaFragment(), "trivia");
             fragmentTransaction.commit();
 
             DrawerLayout drawer = findViewById(R.id.drawer_layout);
