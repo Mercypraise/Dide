@@ -28,62 +28,65 @@
     </RelativeLayout>
 
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/relic_after_math"
+        android:layout_below="@+id/relic"
+        android:background="@android:color/holo_purple">
+
+        <TextView
+            android:id="@+id/en"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="start|top"
+            android:text="Emergency Number"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/en">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="casual"
+                android:text="+2347061979046"
+                android:id="@+id/emergencyNumberCheck"
+                android:layout_centerInParent="true"
+                android:textColor="#060b35"
+                android:textSize="20sp" />
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="40dp"
+                android:background="@android:color/holo_purple"
+                android:src="@drawable/edit" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/relic">
+        android:layout_below="@+id/relic_after_math">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fffae6"
             android:orientation="vertical">
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@android:color/holo_purple">
-
-                <TextView
-                    android:id="@+id/en"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:gravity="start|top"
-                    android:text="Emergency Number"
-                    android:textColor="@android:color/holo_red_dark"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_below="@+id/en">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:fontFamily="casual"
-                        android:text="+2347061979046"
-                        android:layout_centerInParent="true"
-                        android:textColor="#060b35"
-                        android:textSize="20sp" />
-
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginEnd="40dp"
-                        android:background="@android:color/holo_purple"
-                        android:src="@drawable/edit" />
-
-                </RelativeLayout>
-
-            </RelativeLayout>
 
 
             <RelativeLayout
@@ -109,7 +112,7 @@
                     android:layout_below="@+id/na"
                     android:layout_centerHorizontal="true"
                     android:fontFamily="casual"
-                    android:id="@+id/name"
+                    android:id="@+id/nameCheck"
                     android:text="Oseni Taslim"
                     android:textColor="#000000"
                     android:textSize="20sp" />
@@ -121,7 +124,7 @@
                     android:layout_centerVertical="true"
                     android:gravity="start|top"
                     android:layout_marginStart="10dp"
-                    android:layout_toEndOf="@+id/name"
+                    android:layout_toEndOf="@+id/nameCheck"
                     android:text="Edit"
                     android:textColor="#141db9"
                     android:textSize="15sp"
@@ -153,7 +156,7 @@
                     android:layout_below="@+id/em"
                     android:layout_centerHorizontal="true"
                     android:fontFamily="casual"
-                    android:id="@+id/email"
+                    android:id="@+id/emailCheck"
                     android:text="tasleemoseni@gmail.com"
                     android:textColor="#000000"
                     android:textSize="20sp" />
@@ -165,7 +168,7 @@
                     android:layout_centerVertical="true"
                     android:gravity="start|top"
                     android:layout_marginStart="10dp"
-                    android:layout_toEndOf="@+id/email"
+                    android:layout_toEndOf="@+id/emailCheck"
                     android:text="Edit"
                     android:textColor="#141db9"
                     android:textSize="15sp"
@@ -197,6 +200,7 @@
                     android:layout_centerHorizontal="true"
                     android:fontFamily="casual"
                     android:text="male"
+                    android:id="@+id/genderCheck"
                     android:textColor="#000000"
                     android:textSize="20sp" />
             </RelativeLayout>
@@ -228,7 +232,7 @@
                     android:fontFamily="casual"
                     android:text="+2347061979046"
                     android:textColor="#000000"
-                    android:id="@+id/phoneNumber"
+                    android:id="@+id/numberCheck"
                     android:textSize="20sp" />
 
                 <TextView
@@ -238,7 +242,7 @@
                     android:layout_centerVertical="true"
                     android:gravity="start|top"
                     android:layout_marginStart="10dp"
-                    android:layout_toEndOf="@+id/phoneNumber"
+                    android:layout_toEndOf="@+id/numberCheck"
                     android:text="Edit"
                     android:textColor="#141db9"
                     android:textSize="15sp"
@@ -251,4 +255,10 @@
     </ScrollView>
 
 
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:id="@+id/progressBar"/>
 </RelativeLayout>
