@@ -10,16 +10,23 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import apps.amazon.com.dide.activities.EditActivity;
 import apps.amazon.com.dide.R;
 import apps.amazon.com.dide.activities.HomeActivity;
 import apps.amazon.com.dide.activities.LoginActivity;
@@ -31,6 +38,7 @@ public class ProfileFragment extends android.app.Fragment{
     FirebaseAuth mAuth;
     DatabaseReference databaseReference;
     TextView name, email, number, gender, emergencyNumber;
+    ImageView image;
 
     public ProfileFragment(){
 
@@ -48,6 +56,9 @@ public class ProfileFragment extends android.app.Fragment{
         super.onViewCreated(view, savedInstanceState);
 
         mAuth = FirebaseAuth.getInstance();
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+
+
         getView().findViewById(R.id.progressBar).setVisibility(View.VISIBLE);
         getView().findViewById(R.id.root).setVisibility(View.GONE);
 
@@ -55,6 +66,25 @@ public class ProfileFragment extends android.app.Fragment{
         number = getView().findViewById(R.id.numberCheck);
         gender = getView().findViewById(R.id.genderCheck);
         emergencyNumber = getView().findViewById(R.id.emergencyNumberCheck);
+        image = getView().findViewById(R.id.image);
+
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity().getApplicationContext(), "To preserve anonymity, we don't allow profile pictures", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        Snackbar.make(getView().findViewById(android.R.id.content), "Edit profile", Snackbar.LENGTH_LONG)
+                .setAction("Make changes to your profile?", new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v){
+                        startActivity(new Intent(getActivity().getApplicationContext(), EditActivity.class));
+                    }
+                })
+                .setDuration(1200000)
+                .show();
+
 
         if(!isNetworkAvailable()){
             getView().findViewById(R.id.progressBar).setVisibility(View.GONE);
@@ -139,6 +169,12 @@ public class ProfileFragment extends android.app.Fragment{
                 email.setText(userTree.getEmail());
                 gender.setText(userTree.getGender());
                 emergencyNumber.setText(userTree.getEmergencyNumber());
+                if(userTree.getGender().trim().toLowerCase().equals("male")){
+                    image.setImageResource(R.drawable.male);
+                }
+                else if(userTree.getGender().trim().toLowerCase().equals("female")){
+                    image.setImageResource(R.drawable.female);
+                }
 
             }
 

@@ -20,20 +20,22 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
             android:layout_marginEnd="24dp"
+            android:id="@+id/image"
             android:layout_marginTop="24dp"
             android:src="@drawable/male"
             app:civ_border_color="#000000"
             app:civ_border_width="2dp"
             app:civ_circle_background_color="#f5ffe2" />
+
     </RelativeLayout>
 
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
         android:id="@+id/relic_after_math"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
         android:layout_below="@+id/relic"
-        android:background="@android:color/holo_purple">
+        android:background="#292929">
 
         <TextView
             android:id="@+id/en"
@@ -44,35 +46,20 @@
             android:gravity="start|top"
             android:text="Emergency Number"
             android:textColor="@android:color/holo_red_dark"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textSize="18sp" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/emergencyNumberCheck"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_below="@+id/en">
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/en"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:text="+2347061979046"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:fontFamily="casual"
-                android:text="+2347061979046"
-                android:id="@+id/emergencyNumberCheck"
-                android:layout_centerInParent="true"
-                android:textColor="#060b35"
-                android:textSize="20sp" />
-
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginEnd="40dp"
-                android:background="@android:color/holo_purple"
-                android:src="@drawable/edit" />
-
-        </RelativeLayout>
 
     </RelativeLayout>
 
@@ -117,19 +104,6 @@
                     android:textColor="#000000"
                     android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/editDisplayName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:gravity="start|top"
-                    android:layout_marginStart="10dp"
-                    android:layout_toEndOf="@+id/nameCheck"
-                    android:text="Edit"
-                    android:textColor="#141db9"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
             </RelativeLayout>
 
 
@@ -160,19 +134,6 @@
                     android:text="tasleemoseni@gmail.com"
                     android:textColor="#000000"
                     android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/editEmail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:gravity="start|top"
-                    android:layout_marginStart="10dp"
-                    android:layout_toEndOf="@+id/emailCheck"
-                    android:text="Edit"
-                    android:textColor="#141db9"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -210,7 +171,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="30dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="50dp">
 
                 <TextView
                     android:id="@+id/pn"
@@ -234,19 +195,6 @@
                     android:textColor="#000000"
                     android:id="@+id/numberCheck"
                     android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/editPhoneNumber"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:gravity="start|top"
-                    android:layout_marginStart="10dp"
-                    android:layout_toEndOf="@+id/numberCheck"
-                    android:text="Edit"
-                    android:textColor="#141db9"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
 
             </RelativeLayout>
 
