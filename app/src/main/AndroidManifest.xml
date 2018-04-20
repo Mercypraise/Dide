@@ -33,8 +33,10 @@
             android:name=".activities.TwinActivity"
             android:label="@string/title_activity_twin"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"></activity>
-        <activity android:name=".activities.EditActivity"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activities.EditActivity" />
+        <activity android:name=".activities.ViewPostActivity" />
+        <activity android:name=".activities.AddNewStory"></activity>
     </application>
 
 </manifest>

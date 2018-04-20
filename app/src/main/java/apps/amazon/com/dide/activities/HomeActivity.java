@@ -19,7 +19,7 @@ import apps.amazon.com.dide.R;
 import apps.amazon.com.dide.navFragments.AboutFragment;
 import apps.amazon.com.dide.navFragments.HomeFragment;
 import apps.amazon.com.dide.navFragments.ProfileFragment;
-import apps.amazon.com.dide.navFragments.StoriesFragment;
+import apps.amazon.com.dide.navFragments.FeedsFragment;
 import apps.amazon.com.dide.navFragments.TriviaFragment;
 
 
@@ -160,7 +160,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         else if(id == R.id.stories){
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.cont, new StoriesFragment(), "stories");
+            fragmentTransaction.replace(R.id.cont, new FeedsFragment(), "stories");
             fragmentTransaction.commit();
 
             DrawerLayout drawer = findViewById(R.id.drawer_layout);
