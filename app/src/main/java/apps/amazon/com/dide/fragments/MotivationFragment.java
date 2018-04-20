@@ -23,6 +23,7 @@ import java.util.Random;
 
 import apps.amazon.com.dide.activities.HomeActivity;
 import apps.amazon.com.dide.R;
+import apps.amazon.com.dide.activities.UrgentEmergency;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 
@@ -59,7 +60,7 @@ public class MotivationFragment extends Fragment{
             long touchDownMs = 0;
 
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
+            public boolean onTouch(View v, MotionEvent event){
 
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
@@ -87,8 +88,7 @@ public class MotivationFragment extends Fragment{
                         lastTapTimeMs = System.currentTimeMillis();
 
                         if (numberOfTaps == 4) {
-                            Toast.makeText(getActivity().getApplicationContext(), "four taps o", Toast.LENGTH_SHORT).show();
-                            //go to emergency
+                            startActivity(new Intent(getActivity().getApplicationContext(), UrgentEmergency.class));
                         }
                 }
 

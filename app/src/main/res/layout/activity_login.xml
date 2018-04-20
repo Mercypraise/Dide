@@ -4,10 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#232323"
     tools:context=".activities.LoginActivity">
 
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/blackpretty"
+            android:alpha="0.7"
+            android:scaleType="fitXY"/>
+
+    </FrameLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -141,10 +152,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:textSize="17sp"
+        android:id="@+id/butsignup"
         android:layout_marginBottom="22dp"
         android:text="Don't have an account, sign up"
-        android:textColor="#cd830e" />
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:textStyle="bold" />
 
     <ProgressBar
         android:layout_width="wrap_content"

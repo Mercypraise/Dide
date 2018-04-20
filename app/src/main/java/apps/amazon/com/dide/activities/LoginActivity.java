@@ -5,6 +5,7 @@ import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -19,10 +20,9 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import apps.amazon.com.dide.R;
 
-public class LoginActivity extends AppCompatActivity{
+public class LoginActivity extends AppCompatActivity implements View.OnTouchListener{
 
 
-    int ex = 0;
     EditText email, password;
     TextView login;
     FirebaseAuth mAuth;
@@ -39,6 +39,14 @@ public class LoginActivity extends AppCompatActivity{
 
         mAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
+
+        findViewById(R.id.butsignup).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), SignupActivity.class));
+            }
+        });
+
 
         findViewById(R.id.btn_login).setOnClickListener(new View.OnClickListener(){
             @Override
@@ -69,32 +77,13 @@ public class LoginActivity extends AppCompatActivity{
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+    }
 
     @Override
-    public void onBackPressed(){
-        if(ex == 0){
-            Toast.makeText(getApplicationContext(), "Press back again to exit", Toast.LENGTH_LONG).show();
-            ex = 1;
-
-            new CountDownTimer(2000, 1000){
-                @Override
-                public void onTick(long millisUntilFinished){
-
-                }
-
-                @Override
-                public void onFinish(){
-                    ex = 0;
-                }
-            }.start();
-        }
-
-
-        else if(ex == 1){
-            startActivity(new Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_HOME).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
-        }
-
-
-
+    public boolean onTouch(View v, MotionEvent event) {
+        return false;
     }
 }

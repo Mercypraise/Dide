@@ -158,7 +158,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             drawer.closeDrawer(GravityCompat.START);
         }
 
-        else if(id == R.id.stories){
+        else if(id == R.id.feeds){
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.cont, new FeedsFragment(), "stories");
             fragmentTransaction.commit();

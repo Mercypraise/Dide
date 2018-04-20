@@ -70,9 +70,8 @@ public class SplashActivity extends AppCompatActivity{
 
                         lastTapTimeMs = System.currentTimeMillis();
 
-                        if (numberOfTaps == 4) {
-                            Toast.makeText(getApplicationContext(), "four taps o", Toast.LENGTH_SHORT).show();
-                            //go to emergency
+                        if (numberOfTaps == 4){
+                            startActivity(new Intent(getApplicationContext(), UrgentEmergency.class));
                         }
                 }
 

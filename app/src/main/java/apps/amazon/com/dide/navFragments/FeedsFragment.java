@@ -17,7 +17,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,7 +31,6 @@ import apps.amazon.com.dide.activities.HomeActivity;
 import apps.amazon.com.dide.activities.LoginActivity;
 import apps.amazon.com.dide.adapters.RecyclerAdapter;
 import apps.amazon.com.dide.models.PostModel;
-import apps.amazon.com.dide.models.UserModel;
 
 
 public class FeedsFragment extends android.app.Fragment {
@@ -71,7 +69,7 @@ public class FeedsFragment extends android.app.Fragment {
 
 
         ArrayList<PostModel> posts = new ArrayList<>();
-        recyclerView = getView().findViewById(R.id.stories);
+        recyclerView = getView().findViewById(R.id.feeds);
 
 
         if(!isNetworkAvailable()){

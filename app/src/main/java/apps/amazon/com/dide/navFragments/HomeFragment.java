@@ -4,7 +4,6 @@ package apps.amazon.com.dide.navFragments;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,10 +37,12 @@ public class HomeFragment extends android.app.Fragment{
             }
         });
 
-        getView().findViewById(R.id.chat).setOnClickListener(new View.OnClickListener() {
+        getView().findViewById(R.id.feeds).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                //code goes here
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.cont, new FeedsFragment(), "feeds");
+                fragmentTransaction.commit();
             }
         });
 

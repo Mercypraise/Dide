@@ -1,12 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.ViewPostActivity">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="The art of the thief" />
-</RelativeLayout>
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The art of the thief"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:id="@+id/title"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:id="@+id/content"
+            android:singleLine="false"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="sdfsdgsdgsfg"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"/>
+
+
+    </RelativeLayout>
+
+</ScrollView>

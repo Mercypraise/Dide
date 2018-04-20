@@ -13,13 +13,11 @@
     <item android:title="Communication">
         <menu>
             <item
-                android:id="@+id/stories"
-                android:icon="@drawable/stories"
-                android:title="Stories" />
+                android:id="@+id/feeds"
+                android:title="Feeds" />
             <item
                 android:id="@+id/trivia"
-                android:title="Trivia"
-                android:icon="@drawable/trivia"/>
+                android:title="Trivia"/>
         </menu>
     </item>
 
@@ -28,19 +26,15 @@
         <menu>
             <item
                 android:id="@+id/nav_about"
-                android:icon="@drawable/about"
                 android:title="About" />
             <item
                 android:id="@+id/faq"
-                android:icon="@drawable/faq"
                 android:title="FAQ"/>
             <item
                 android:id="@+id/nav_rate"
-                android:icon="@drawable/rate"
                 android:title="Rate" />
             <item
                 android:id="@+id/donate"
-                android:icon="@drawable/donate"
                 android:title="Donate" />
         </menu>
     </item>

@@ -36,7 +36,8 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".activities.EditActivity" />
         <activity android:name=".activities.ViewPostActivity" />
-        <activity android:name=".activities.AddNewStory"></activity>
+        <activity android:name=".activities.AddNewStory" />
+        <activity android:name=".activities.UrgentEmergency"></activity>
     </application>
 
 </manifest>
