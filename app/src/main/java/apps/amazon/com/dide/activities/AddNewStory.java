@@ -68,7 +68,7 @@ public class AddNewStory extends AppCompatActivity {
                         mCheckAndSetValues(databaseReference);
                     }
                     else{
-                        PostModel newPost = new PostModel(namee, title.getText().toString().trim(), content.getText().toString().trim(), "id", comments, commenters);
+                        PostModel newPost = new PostModel(namee, title.getText().toString().trim(), content.getText().toString().trim(), databaseReference.child("posts").push().getKey(), comments, commenters);
                         databaseReference.child("posts").push().setValue(newPost).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task){
