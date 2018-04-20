@@ -72,7 +72,7 @@ public class SignupActivity extends AppCompatActivity {
                         if(task.isSuccessful()){
                             UserModel newUser = new UserModel(name.getText().toString().trim(), email.getText().toString().trim(), number.getText().toString().trim(), gend, "07061979046");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            databaseReference.child(user.getUid()).setValue(newUser);
+                            databaseReference.child("users").child(user.getUid()).setValue(newUser);
                             startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                         }
                         else{

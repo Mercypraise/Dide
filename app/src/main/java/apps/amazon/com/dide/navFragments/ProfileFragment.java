@@ -134,7 +134,7 @@ public class ProfileFragment extends android.app.Fragment{
     private void mReadDataOnce(final MyPersonalListener listener, DatabaseReference databaseReference, FirebaseAuth mAuth){
         listener.onStart();
         FirebaseUser user = mAuth.getCurrentUser();
-        databaseReference.child(user.getUid()).addValueEventListener(new ValueEventListener(){
+        databaseReference.child("users").child(user.getUid()).addValueEventListener(new ValueEventListener(){
             @Override
             public void onDataChange(DataSnapshot dataSnapshot){
                 listener.onSuccess(dataSnapshot);
@@ -169,6 +169,7 @@ public class ProfileFragment extends android.app.Fragment{
                 email.setText(userTree.getEmail());
                 gender.setText(userTree.getGender());
                 emergencyNumber.setText(userTree.getEmergencyNumber());
+
                 if(userTree.getGender().trim().toLowerCase().equals("male")){
                     image.setImageResource(R.drawable.male);
                 }
