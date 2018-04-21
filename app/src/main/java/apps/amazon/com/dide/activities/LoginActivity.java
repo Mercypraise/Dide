@@ -2,11 +2,13 @@ package apps.amazon.com.dide.activities;
 
 import android.content.Intent;
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +29,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnTouchList
     TextView login;
     FirebaseAuth mAuth;
     DatabaseReference databaseReference;
+    Handler handler = new Handler();
+
+    int numberOfTaps = 0;
+    long lastTapTimeMs = 0;
+    long touchDownMs = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -39,6 +46,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnTouchList
 
         mAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
+
+        findViewById(R.id.imagee).setOnTouchListener(this);
 
         findViewById(R.id.butsignup).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,6 +93,36 @@ public class LoginActivity extends AppCompatActivity implements View.OnTouchList
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        return false;
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                touchDownMs = System.currentTimeMillis();
+                break;
+            case MotionEvent.ACTION_UP:
+                handler.removeCallbacksAndMessages(null);
+
+                if((System.currentTimeMillis() - touchDownMs) > ViewConfiguration.getTapTimeout()){
+
+                    numberOfTaps = 0;
+                    lastTapTimeMs = 0;
+                    break;
+                }
+
+                if(numberOfTaps > 0 && (System.currentTimeMillis() - lastTapTimeMs) < ViewConfiguration.getDoubleTapTimeout()) {
+                    numberOfTaps += 1;
+
+                }
+
+                else{
+                    numberOfTaps = 1;
+                }
+
+                lastTapTimeMs = System.currentTimeMillis();
+
+                if (numberOfTaps == 4){
+                    startActivity(new Intent(getApplicationContext(), UrgentEmergency.class));
+                }
+        }
+
+        return true;
     }
 }

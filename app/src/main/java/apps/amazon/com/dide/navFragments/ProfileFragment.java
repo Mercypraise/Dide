@@ -9,10 +9,13 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -30,6 +33,7 @@ import apps.amazon.com.dide.activities.EditActivity;
 import apps.amazon.com.dide.R;
 import apps.amazon.com.dide.activities.HomeActivity;
 import apps.amazon.com.dide.activities.LoginActivity;
+import apps.amazon.com.dide.activities.UrgentEmergency;
 import apps.amazon.com.dide.models.UserModel;
 
 
@@ -62,6 +66,49 @@ public class ProfileFragment extends android.app.Fragment{
         getView().findViewById(R.id.progressBar).setVisibility(View.VISIBLE);
         getView().findViewById(R.id.root).setVisibility(View.GONE);
 
+        getView().findViewById(R.id.root).setOnTouchListener(new View.OnTouchListener(){
+
+            Handler handler = new Handler();
+
+            int numberOfTaps = 0;
+            long lastTapTimeMs = 0;
+            long touchDownMs = 0;
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        touchDownMs = System.currentTimeMillis();
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        handler.removeCallbacksAndMessages(null);
+
+                        if((System.currentTimeMillis() - touchDownMs) > ViewConfiguration.getTapTimeout()){
+
+                            numberOfTaps = 0;
+                            lastTapTimeMs = 0;
+                            break;
+                        }
+
+                        if(numberOfTaps > 0 && (System.currentTimeMillis() - lastTapTimeMs) < ViewConfiguration.getDoubleTapTimeout()) {
+                            numberOfTaps += 1;
+
+                        }
+
+                        else{
+                            numberOfTaps = 1;
+                        }
+
+                        lastTapTimeMs = System.currentTimeMillis();
+
+                        if (numberOfTaps == 4){
+                            startActivity(new Intent(getActivity().getApplicationContext(), UrgentEmergency.class));
+                        }
+                }
+
+                return true;
+            }
+        });
         name = getView().findViewById(R.id.nameCheck);
         number = getView().findViewById(R.id.numberCheck);
         gender = getView().findViewById(R.id.genderCheck);
@@ -75,8 +122,8 @@ public class ProfileFragment extends android.app.Fragment{
             }
         });
 
-        Snackbar.make(getView().findViewById(android.R.id.content), "Edit profile", Snackbar.LENGTH_LONG)
-                .setAction("Make changes to your profile?", new View.OnClickListener(){
+        Snackbar.make(getActivity().findViewById(android.R.id.content), "", Snackbar.LENGTH_LONG)
+                .setAction("Tap to edit your profile", new View.OnClickListener(){
                     @Override
                     public void onClick(View v){
                         startActivity(new Intent(getActivity().getApplicationContext(), EditActivity.class));

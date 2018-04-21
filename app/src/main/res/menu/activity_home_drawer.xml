@@ -14,10 +14,11 @@
         <menu>
             <item
                 android:id="@+id/feeds"
-                android:title="Feeds" />
+                android:title="Feeds"/>
             <item
                 android:id="@+id/trivia"
-                android:title="Trivia"/>
+                android:title="Trivia"
+                android:icon="@drawable/trivia"/>
         </menu>
     </item>
 
@@ -26,16 +27,18 @@
         <menu>
             <item
                 android:id="@+id/nav_about"
-                android:title="About" />
+                android:title="About"/>
             <item
                 android:id="@+id/faq"
-                android:title="FAQ"/>
+                android:title="FAQ"
+                android:icon="@drawable/faq"/>
             <item
                 android:id="@+id/nav_rate"
-                android:title="Rate" />
+                android:title="Rate"/>
             <item
                 android:id="@+id/donate"
-                android:title="Donate" />
+                android:title="Donate"
+                android:icon="@drawable/donate"/>
         </menu>
     </item>
 

@@ -98,11 +98,12 @@ public class MotivationFragment extends Fragment{
 
 
         int[] quotes = {R.drawable.b1, R.drawable.b3, R.drawable.b4, R.drawable.b6,
-                        R.drawable.b7, R.drawable.b10, R.drawable.b12,
-                        R.drawable.b16, R.drawable.b18, R.drawable.b19, R.drawable.b21,
-                        R.drawable.b22, R.drawable.b23, R.drawable.b24, R.drawable.b25,
-                        R.drawable.b27, R.drawable.b28, R.drawable.b30, R.drawable.b31,
-                        R.drawable.b32, R.drawable.b34, R.drawable.b35, R.drawable.b36};
+                        R.drawable.b7, R.drawable.b10, R.drawable.b12, R.drawable.b18,
+                        R.drawable.b19, R.drawable.b21, R.drawable.b22, R.drawable.b23,
+                        R.drawable.b24, R.drawable.b25, R.drawable.b27, R.drawable.b28,
+                        R.drawable.b30, R.drawable.b31, R.drawable.b32, R.drawable.b34,
+                        R.drawable.b35, R.drawable.b36};
+
 
         final int[] colours = {Color.parseColor("#adfb7777"), Color.parseColor("#a493d5fb"),
                          Color.parseColor("#a45fba88"), Color.parseColor("#a45c2462")};

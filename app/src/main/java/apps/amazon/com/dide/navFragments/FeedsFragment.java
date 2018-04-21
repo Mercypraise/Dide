@@ -9,11 +9,14 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,6 +32,7 @@ import apps.amazon.com.dide.R;
 import apps.amazon.com.dide.activities.AddNewStory;
 import apps.amazon.com.dide.activities.HomeActivity;
 import apps.amazon.com.dide.activities.LoginActivity;
+import apps.amazon.com.dide.activities.UrgentEmergency;
 import apps.amazon.com.dide.adapters.RecyclerAdapter;
 import apps.amazon.com.dide.models.PostModel;
 
@@ -64,6 +68,50 @@ public class FeedsFragment extends android.app.Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity().getApplicationContext(), AddNewStory.class));
+            }
+        });
+
+        getView().findViewById(R.id.root).setOnTouchListener(new View.OnTouchListener() {
+
+            Handler handler = new Handler();
+
+            int numberOfTaps = 0;
+            long lastTapTimeMs = 0;
+            long touchDownMs = 0;
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        touchDownMs = System.currentTimeMillis();
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        handler.removeCallbacksAndMessages(null);
+
+                        if((System.currentTimeMillis() - touchDownMs) > ViewConfiguration.getTapTimeout()){
+
+                            numberOfTaps = 0;
+                            lastTapTimeMs = 0;
+                            break;
+                        }
+
+                        if(numberOfTaps > 0 && (System.currentTimeMillis() - lastTapTimeMs) < ViewConfiguration.getDoubleTapTimeout()) {
+                            numberOfTaps += 1;
+
+                        }
+
+                        else{
+                            numberOfTaps = 1;
+                        }
+
+                        lastTapTimeMs = System.currentTimeMillis();
+
+                        if (numberOfTaps == 4){
+                            startActivity(new Intent(getActivity().getApplicationContext(), UrgentEmergency.class));
+                        }
+                }
+
+                return true;
             }
         });
 
