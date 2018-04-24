@@ -107,7 +107,9 @@ public class HomeFragment extends android.app.Fragment{
         getView().findViewById(R.id.report).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //code goes here
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.cont, new ReportFragment(), "report");
+                fragmentTransaction.commit();
             }
         });
 

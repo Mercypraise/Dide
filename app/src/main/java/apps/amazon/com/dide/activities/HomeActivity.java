@@ -47,18 +47,21 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.cont, new TicTacToeFragment(), "ticky");
             fragmentTransaction.commit();
+            getSupportActionBar().setTitle("");
         }
 
         else if((getIntent().getStringExtra("HAA") != null) && getIntent().getStringExtra("HAA").equals("game")){
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.cont, new TriviaFragment(), "game");
             fragmentTransaction.commit();
+            getSupportActionBar().setTitle("");
         }
 
         else{
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.cont, new HomeFragment(), "home");
             fragmentTransaction.commit();
+            getSupportActionBar().setTitle("Home");
         }
 
 

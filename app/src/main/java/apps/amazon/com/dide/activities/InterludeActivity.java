@@ -10,15 +10,30 @@ import android.view.ViewConfiguration;
 
 import apps.amazon.com.dide.R;
 
-public class DefendingYourBackActivity extends AppCompatActivity{
+public class InterludeActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_defending_your_back);
+        setContentView(R.layout.activity_interlude);
+
+        findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+            }
+        });
 
 
-        findViewById(R.id.cef).setOnTouchListener(new View.OnTouchListener(){
+        findViewById(R.id.signup).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), SignupActivity.class));
+            }
+        });
+
+
+        findViewById(R.id.interludeID).setOnTouchListener(new View.OnTouchListener(){
             Handler handler = new Handler();
 
             int numberOfTaps = 0;

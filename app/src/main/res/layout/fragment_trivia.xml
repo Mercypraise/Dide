@@ -15,5 +15,4 @@
         android:id="@+id/tictoc"
         android:layout_centerInParent="true"/>
 
-
 </RelativeLayout>

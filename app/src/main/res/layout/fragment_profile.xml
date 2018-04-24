@@ -3,204 +3,211 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/root"
+    android:id="@+id/mama"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".navFragments.ProfileFragment">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@android:color/holo_blue_bright"
-        android:id="@+id/relic">
+        android:id="@+id/root"
+        android:layout_height="match_parent">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="24dp"
-            android:id="@+id/image"
-            android:layout_marginTop="24dp"
-            android:src="@drawable/male"
-            app:civ_border_color="#000000"
-            app:civ_border_width="2dp"
-            app:civ_circle_background_color="#f5ffe2" />
-
-    </RelativeLayout>
-
-
-    <RelativeLayout
-        android:id="@+id/relic_after_math"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_below="@+id/relic"
-        android:background="#292929">
-
-        <TextView
-            android:id="@+id/en"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:gravity="start|top"
-            android:text="Emergency Number"
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/emergencyNumberCheck"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:layout_below="@+id/en"
-            android:fontFamily="casual"
-            android:textStyle="bold"
-            android:text="+2347061979046"
-            android:textColor="#ffffff"
-            android:textSize="20sp" />
-
-
-    </RelativeLayout>
-
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/relic_after_math">
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#fffae6"
-            android:orientation="vertical">
+            android:layout_height="150dp"
+            android:background="@android:color/holo_blue_bright"
+            android:id="@+id/relic">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="24dp"
+                android:id="@+id/image"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/male"
+                app:civ_border_color="#000000"
+                app:civ_border_width="2dp"
+                app:civ_circle_background_color="#f5ffe2" />
+
+        </RelativeLayout>
 
 
-            <RelativeLayout
+        <RelativeLayout
+            android:id="@+id/relic_after_math"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/relic"
+            android:background="#292929">
+
+            <TextView
+                android:id="@+id/en"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="start|top"
+                android:text="Emergency Number"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/emergencyNumberCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/en"
+                android:fontFamily="casual"
+                android:textStyle="bold"
+                android:text="+2347061979046"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relic_after_math">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="30dp">
-
-                <TextView
-                    android:id="@+id/na"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="15dp"
-                    android:gravity="start|top"
-                    android:text="Display name"
-                    android:textColor="@android:color/holo_red_dark"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_below="@+id/na"
-                    android:layout_centerHorizontal="true"
-                    android:fontFamily="casual"
-                    android:id="@+id/nameCheck"
-                    android:text="Oseni Taslim"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
-
-            </RelativeLayout>
+                android:layout_height="wrap_content"
+                android:background="#fffae6"
+                android:orientation="vertical">
 
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="30dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="30dp">
 
-                <TextView
-                    android:id="@+id/em"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="15dp"
-                    android:gravity="start|top"
-                    android:text="Email"
-                    android:textColor="@android:color/holo_red_dark"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/na"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="15dp"
+                        android:gravity="start|top"
+                        android:text="Display name"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_below="@+id/em"
-                    android:layout_centerHorizontal="true"
-                    android:fontFamily="casual"
-                    android:id="@+id/emailCheck"
-                    android:text="tasleemoseni@gmail.com"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/na"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="casual"
+                        android:id="@+id/nameCheck"
+                        android:text="Oseni Taslim"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="30dp">
-
-                <TextView
-                    android:id="@+id/gd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="15dp"
-                    android:gravity="start|top"
-                    android:text="Gender"
-                    android:textColor="@android:color/holo_red_dark"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_below="@+id/gd"
-                    android:layout_centerHorizontal="true"
-                    android:fontFamily="casual"
-                    android:text="male"
-                    android:id="@+id/genderCheck"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
-            </RelativeLayout>
+                </RelativeLayout>
 
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="50dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="30dp">
 
-                <TextView
-                    android:id="@+id/pn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="15dp"
-                    android:gravity="start|top"
-                    android:text="Phone number"
-                    android:textColor="@android:color/holo_red_dark"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/em"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="15dp"
+                        android:gravity="start|top"
+                        android:text="Email"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_below="@+id/pn"
-                    android:layout_centerHorizontal="true"
-                    android:fontFamily="casual"
-                    android:text="+2347061979046"
-                    android:textColor="#000000"
-                    android:id="@+id/numberCheck"
-                    android:textSize="20sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/em"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="casual"
+                        android:id="@+id/emailCheck"
+                        android:text="tasleemoseni@gmail.com"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
 
-            </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:id="@+id/gd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="15dp"
+                        android:gravity="start|top"
+                        android:text="Gender"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/gd"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="casual"
+                        android:text="male"
+                        android:id="@+id/genderCheck"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+                </RelativeLayout>
 
 
-        </LinearLayout>
-    </ScrollView>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="50dp">
+
+                    <TextView
+                        android:id="@+id/pn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="15dp"
+                        android:gravity="start|top"
+                        android:text="Phone number"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/pn"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="casual"
+                        android:text="+2347061979046"
+                        android:textColor="#000000"
+                        android:id="@+id/numberCheck"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
 
 
     <ProgressBar
@@ -209,4 +216,7 @@
         android:layout_centerInParent="true"
         android:visibility="gone"
         android:id="@+id/progressBar"/>
+
 </RelativeLayout>
+
+

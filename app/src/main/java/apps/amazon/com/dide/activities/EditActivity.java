@@ -1,5 +1,6 @@
 package apps.amazon.com.dide.activities;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Handler;
@@ -35,6 +36,7 @@ public class EditActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
 
+        final Context context = this;
         mAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
@@ -135,7 +137,7 @@ public class EditActivity extends AppCompatActivity{
             public void onClick(View v){
                 ++i;
                 if(i == items.size()){
-                    new AlertDialog.Builder(getApplicationContext())
+                    new AlertDialog.Builder(context)
                             .setMessage("Complete!")
                             .setCancelable(false)
                             .setPositiveButton("Back to profile", new DialogInterface.OnClickListener() {

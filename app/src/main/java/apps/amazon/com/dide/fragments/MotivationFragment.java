@@ -62,7 +62,7 @@ public class MotivationFragment extends Fragment{
             @Override
             public boolean onTouch(View v, MotionEvent event){
 
-                switch (event.getAction()) {
+                switch (event.getAction()){
                     case MotionEvent.ACTION_DOWN:
                         touchDownMs = System.currentTimeMillis();
                         break;

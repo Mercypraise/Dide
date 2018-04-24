@@ -68,7 +68,7 @@
                 android:layout_marginEnd="10dp"
                 android:visibility="gone"
                 app:cardCornerRadius="20dp"
-                app:cardBackgroundColor="@android:color/holo_orange_light"
+                app:cardBackgroundColor="#ffffff"
                 android:id="@+id/emailCard">
 
                 <EditText
@@ -92,8 +92,8 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:visibility="gone"
+                app:cardBackgroundColor="#ffffff"
                 app:cardCornerRadius="20dp"
-                app:cardBackgroundColor="@android:color/holo_orange_light"
                 android:id="@+id/numberCard">
 
                 <EditText
@@ -181,49 +181,10 @@
             android:src="@drawable/next"
             android:id="@+id/btn_signup"
             android:layout_gravity="end|bottom"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="60dp"
             app:backgroundTint="@android:color/holo_red_dark" />
 
     </android.support.v7.widget.CardView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="36dp"
-        android:orientation="vertical">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="25dp"
-            android:textStyle="bold"
-            android:text="-- or --"
-            android:textColor="#000000"
-            android:textSize="21sp" />
-
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="25dp"
-            app:cardBackgroundColor="#a41c3db6"
-            app:cardCornerRadius="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Sign up with Facebook"
-                android:textColor="#ffffff"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-        </android.support.v7.widget.CardView>
-    </LinearLayout>
 
 
 

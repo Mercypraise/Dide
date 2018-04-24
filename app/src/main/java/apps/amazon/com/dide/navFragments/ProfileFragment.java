@@ -20,7 +20,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -28,11 +27,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import apps.amazon.com.dide.activities.EditActivity;
 import apps.amazon.com.dide.R;
 import apps.amazon.com.dide.activities.HomeActivity;
-import apps.amazon.com.dide.activities.LoginActivity;
+import apps.amazon.com.dide.activities.InterludeActivity;
 import apps.amazon.com.dide.activities.UrgentEmergency;
 import apps.amazon.com.dide.models.UserModel;
 
@@ -62,11 +60,11 @@ public class ProfileFragment extends android.app.Fragment{
         mAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
-
         getView().findViewById(R.id.progressBar).setVisibility(View.VISIBLE);
-        getView().findViewById(R.id.root).setVisibility(View.GONE);
 
-        getView().findViewById(R.id.root).setOnTouchListener(new View.OnTouchListener(){
+
+        getView().findViewById(R.id.root).setVisibility(View.GONE);
+        getView().findViewById(R.id.mama).setOnTouchListener(new View.OnTouchListener(){
 
             Handler handler = new Handler();
 
@@ -109,6 +107,7 @@ public class ProfileFragment extends android.app.Fragment{
                 return true;
             }
         });
+
         name = getView().findViewById(R.id.nameCheck);
         number = getView().findViewById(R.id.numberCheck);
         gender = getView().findViewById(R.id.genderCheck);
@@ -154,7 +153,7 @@ public class ProfileFragment extends android.app.Fragment{
                     .setPositiveButton("Log in", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            startActivity(new Intent(getActivity().getApplicationContext(), LoginActivity.class));
+                            startActivity(new Intent(getActivity().getApplicationContext(), InterludeActivity.class));
                         }
                     })
                     .setNegativeButton("Later", new DialogInterface.OnClickListener() {
@@ -210,7 +209,6 @@ public class ProfileFragment extends android.app.Fragment{
                 UserModel userTree = dataSnapshot.getValue(UserModel.class);
 
                 getView().findViewById(R.id.progressBar).setVisibility(View.GONE);
-                getView().findViewById(R.id.root).setVisibility(View.VISIBLE);
 
                 name.setText(userTree.getDisplayName());
                 email.setText(userTree.getEmail());

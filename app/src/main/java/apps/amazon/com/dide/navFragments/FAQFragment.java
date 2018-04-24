@@ -17,12 +17,13 @@ import apps.amazon.com.dide.R;
 import apps.amazon.com.dide.activities.UrgentEmergency;
 
 
-public class FAQFragment extends Fragment {
+public class FAQFragment extends android.app.Fragment{
 
 
     public FAQFragment(){
 
     }
+
 
 
     @Override

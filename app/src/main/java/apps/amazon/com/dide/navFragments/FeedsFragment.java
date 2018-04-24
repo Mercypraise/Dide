@@ -31,6 +31,7 @@ import java.util.ArrayList;
 import apps.amazon.com.dide.R;
 import apps.amazon.com.dide.activities.AddNewStory;
 import apps.amazon.com.dide.activities.HomeActivity;
+import apps.amazon.com.dide.activities.InterludeActivity;
 import apps.amazon.com.dide.activities.LoginActivity;
 import apps.amazon.com.dide.activities.UrgentEmergency;
 import apps.amazon.com.dide.adapters.RecyclerAdapter;
@@ -141,7 +142,7 @@ public class FeedsFragment extends android.app.Fragment {
                     .setPositiveButton("Log in", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            startActivity(new Intent(getActivity().getApplicationContext(), LoginActivity.class));
+                            startActivity(new Intent(getActivity().getApplicationContext(), InterludeActivity.class));
                         }
                     })
                     .setNegativeButton("Later", new DialogInterface.OnClickListener() {

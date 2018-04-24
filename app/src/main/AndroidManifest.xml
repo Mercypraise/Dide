@@ -44,7 +44,8 @@
         <activity android:name=".activities.DefendingFromFrontActivity" />
         <activity android:name=".activities.DefendingYourBackActivity" />
         <activity android:name=".activities.AvoidingConfrontationActivity" />
-        <activity android:name=".activities.QuotesActivity"></activity>
+        <activity android:name=".activities.QuotesActivity" />
+        <activity android:name=".activities.InterludeActivity"></activity>
     </application>
 
 </manifest>
