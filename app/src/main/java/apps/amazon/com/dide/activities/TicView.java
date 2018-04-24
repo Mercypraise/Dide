@@ -3,6 +3,7 @@ package apps.amazon.com.dide.activities;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -12,7 +13,7 @@ import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 
-import apps.amazon.com.dide.TicTacToeFragment;
+import apps.amazon.com.dide.navFragments.TicTacToeFragment;
 
 public class TicView extends View {
 
@@ -398,21 +399,22 @@ public class TicView extends View {
     }
 
     public void showAlert(String str) {
-        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                switch (which) {
-                    case DialogInterface.BUTTON_POSITIVE: {
-                        TicTacToeFragment.act_1e.onBackPressed();
+
+        new AlertDialog.Builder(getContext())
+                .setMessage(str)
+                .setPositiveButton("Play again", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        getContext().startActivity(new Intent(getContext().getApplicationContext(), HomeActivity.class).putExtra("HAA", "xando"));
                     }
-                    case DialogInterface.BUTTON_NEGATIVE:
-                        //No button clicked
-                        break;
-                }
-            }
-        };
-        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setMessage(str).setPositiveButton("Ok!", dialogClickListener).show();
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        getContext().startActivity(new Intent(getContext().getApplicationContext(), HomeActivity.class).putExtra("HAA", "game"));
+                    }
+                })
+                .show();
     }
 
     public void check() {

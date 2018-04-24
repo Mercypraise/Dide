@@ -110,7 +110,7 @@ public class MotivationFragment extends Fragment{
 
         new CountDownTimer(800, 1000){
             @Override
-            public void onTick(long millisUntilFinished) {
+            public void onTick(long millisUntilFinished){
 
             }
 
@@ -124,5 +124,7 @@ public class MotivationFragment extends Fragment{
                 start();
             }
         }.start();
+
     }
+
 }

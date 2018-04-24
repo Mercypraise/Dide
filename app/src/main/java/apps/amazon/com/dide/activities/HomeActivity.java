@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 import apps.amazon.com.dide.R;
+import apps.amazon.com.dide.navFragments.TicTacToeFragment;
 import apps.amazon.com.dide.navFragments.AboutFragment;
 import apps.amazon.com.dide.navFragments.HomeFragment;
 import apps.amazon.com.dide.navFragments.ProfileFragment;
@@ -42,9 +43,24 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.cont, new HomeFragment(), "home");
-        fragmentTransaction.commit();
+        if((getIntent().getStringExtra("HAA") != null) && getIntent().getStringExtra("HAA").equals("xando")){
+            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.cont, new TicTacToeFragment(), "ticky");
+            fragmentTransaction.commit();
+        }
+
+        else if((getIntent().getStringExtra("HAA") != null) && getIntent().getStringExtra("HAA").equals("game")){
+            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.cont, new TriviaFragment(), "game");
+            fragmentTransaction.commit();
+        }
+
+        else{
+            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.cont, new HomeFragment(), "home");
+            fragmentTransaction.commit();
+        }
+
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);

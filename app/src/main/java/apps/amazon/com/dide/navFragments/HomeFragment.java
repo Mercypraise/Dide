@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 import apps.amazon.com.dide.R;
 import apps.amazon.com.dide.activities.MessFragment;
+import apps.amazon.com.dide.activities.QuotesActivity;
 import apps.amazon.com.dide.activities.UrgentEmergency;
 
 
@@ -99,7 +100,7 @@ public class HomeFragment extends android.app.Fragment{
         getView().findViewById(R.id.motiv).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //code goes here
+                startActivity(new Intent(getActivity().getApplicationContext(), QuotesActivity.class));
             }
         });
 
@@ -113,14 +114,18 @@ public class HomeFragment extends android.app.Fragment{
         getView().findViewById(R.id.trivia).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //code goes here
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.cont, new TriviaFragment(), "trivia");
+                fragmentTransaction.commit();
             }
         });
 
         getView().findViewById(R.id.counsellor).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //code goes here
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.cont, new CounsellorFragment(), "counsellor");
+                fragmentTransaction.commit();
             }
         });
     }

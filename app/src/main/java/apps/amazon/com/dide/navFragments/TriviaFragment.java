@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -14,16 +13,14 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 
 import apps.amazon.com.dide.R;
-import apps.amazon.com.dide.TicTacToeFragment;
-import apps.amazon.com.dide.activities.MessFragment;
 import apps.amazon.com.dide.activities.UrgentEmergency;
 
 
 public class TriviaFragment extends android.app.Fragment {
 
 
-    public TriviaFragment() {
-        // Required empty public constructor
+    public TriviaFragment(){
+
     }
 
 

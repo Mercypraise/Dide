@@ -23,7 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="url" value="jar:file:/home/taslim/android-studio/plugins/android/lib/android.jar!/images/material_design_icons/image/ic_edit_black_24dp.xml" />
+                                                <entry key="url" value="jar:file:/home/taslim/android-studio/plugins/android/lib/android.jar!/images/material_design_icons/navigation/ic_arrow_forward_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -33,9 +33,35 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="edit" />
+                                      <entry key="outputName" value="nextt" />
                                       <entry key="theme" value="CUSTOM" />
-                                      <entry key="themeColor" value="666666" />
+                                      <entry key="themeColor" value="000000" />
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                            <entry key="launcherLegacy">
+                              <value>
+                                <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="clipartAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="url" value="jar:file:/home/taslim/android-studio/plugins/android/lib/android.jar!/images/material_design_icons/navigation/ic_arrow_back_black_24dp.xml" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="outputName" value="previous" />
                                     </map>
                                   </option>
                                 </PersistentState>
