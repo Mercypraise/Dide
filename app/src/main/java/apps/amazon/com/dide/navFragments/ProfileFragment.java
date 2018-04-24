@@ -136,7 +136,7 @@ public class ProfileFragment extends android.app.Fragment{
         if(!isNetworkAvailable()){
             getView().findViewById(R.id.progressBar).setVisibility(View.GONE);
             new AlertDialog.Builder(getActivity())
-                    .setTitle("You don't seem to be connected to the internet. Check your connection and try again")
+                    .setMessage("You don't seem to be connected to the internet. Check your connection and try again")
                     .setCancelable(false)
                     .setPositiveButton("Okay", new DialogInterface.OnClickListener(){
                         @Override
@@ -149,7 +149,7 @@ public class ProfileFragment extends android.app.Fragment{
         else if(mAuth.getCurrentUser() == null){
             getView().findViewById(R.id.progressBar).setVisibility(View.GONE);
             new AlertDialog.Builder(getActivity())
-                    .setTitle("You need to be logged in to use this feature")
+                    .setMessage("You need to be logged in to use this feature")
                     .setCancelable(false)
                     .setPositiveButton("Log in", new DialogInterface.OnClickListener() {
                         @Override
@@ -231,7 +231,7 @@ public class ProfileFragment extends android.app.Fragment{
                 getView().findViewById(R.id.progressBar).setVisibility(View.GONE);
 
                 new AlertDialog.Builder(getActivity())
-                        .setTitle("Something went wrong, try again?")
+                        .setMessage("Something went wrong, try again?")
                         .setCancelable(false)
                         .setPositiveButton("Okay", new DialogInterface.OnClickListener(){
                             @Override

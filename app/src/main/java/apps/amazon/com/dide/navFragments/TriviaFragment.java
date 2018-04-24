@@ -1,6 +1,7 @@
 package apps.amazon.com.dide.navFragments;
 
 
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,6 +14,8 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 
 import apps.amazon.com.dide.R;
+import apps.amazon.com.dide.TicTacToeFragment;
+import apps.amazon.com.dide.activities.MessFragment;
 import apps.amazon.com.dide.activities.UrgentEmergency;
 
 
@@ -33,6 +36,16 @@ public class TriviaFragment extends android.app.Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        getView().findViewById(R.id.tictoc).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.cont, new TicTacToeFragment(), "ticky");
+                fragmentTransaction.commit();
+            }
+        });
+
 
         getView().findViewById(R.id.triviaID).setOnTouchListener(new View.OnTouchListener() {
 

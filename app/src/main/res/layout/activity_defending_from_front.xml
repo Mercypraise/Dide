@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DefendingFromFrontActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/def4"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\t\t\tGo for the eyes and nose. If you have to end the fight as quickly as possible by striking first, strike hard, and strike as many times as you can, then run for help. Getting ambushed in an alley by a mugger isn't the time to worry about fighting honorably. Keep yourself safe by making the confrontation as quick as possible.\n\n\t\t\tThe eyes and nose are the most sensitive soft spots on your attacker's face and are vulnerable to elbows, knees, and your forehead\n\n\t\t\tWith the hardest part of your forehead, right near the hairline, try to smash your assailant's nose by tensing your neck and driving your forehead into the middle of their face. This is the quickest and most unexpected way to end a fight completely. However strong, experienced, or violent your attacker, it's very difficult to quickly recover from a hard head-butt to the nose."
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="------------------------------------"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="23sp"/>
+
+
+
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/def5"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\t\t\tKick or grab the groin of a male attacker. Bringing a knee sharply into the groin of an attacker or grabbing the groin with your hand and twisting is an instantly effective move that will take your attacker down. Again, this isn't the time to worry about fighting dirty. If your life is in danger, go for the groin.\n\n\t\t\tIf this doubles up your opponent, consider smashing your knee into his nose to ensure that he'll be down for the count."
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="------------------------------------"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="23sp"/>
+
+
+
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/def6"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\t\t\tStomp your heel. If your being attacked from the back, chances are the attacker has his/her arms around your upper half. If your wearing heels or shoes such as heavy heel boots, this is especially effective. Move your foot near the attacker's, lift your foot up and bring it down on their foot as hard as you can. If they let you go, run; if they don't, try the next idea."
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="------------------------------------"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="23sp"/>
+
+
+
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/def7"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\t\t\tGo for the kneecaps. If, for example, you are being choked, or your assailant has their hands up in your face, attacking their legs will give you the opportunity to open him up to more attacks, or allow you to escape.\n\n\t\t\tThis is especially effective on larger attackers and easy to do from your guarded position.\n\n\t\t\tKick at shins and knees soccer-style, with the instep of your foot. This is a quick and painful kick. In addition, if his/her legs are close enough, lift your knees into their inner leg (femoral nerve), outer leg, knee, or groin. These will break down your attacker and may disable them, as only 12-16 pounds of pressure are needed to break a knee."
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="------------------------------------"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="23sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Source: wikihow.com"
+            android:layout_gravity="center"
+            android:layout_marginBottom="13dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+</ScrollView>

@@ -180,11 +180,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             getSupportActionBar().setTitle("Trivia");
         }
 
-        else if(id == R.id.donate){
-                DrawerLayout drawer = findViewById(R.id.drawer_layout);
-                drawer.closeDrawer(GravityCompat.START);
-                Toast.makeText(getApplicationContext(), "This setting has not been added yet, sorry ehn", Toast.LENGTH_LONG).show();
-            }
 
         else if(id == R.id.faq){
             DrawerLayout drawer = findViewById(R.id.drawer_layout);

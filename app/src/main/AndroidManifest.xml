@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="apps.amazon.com.dide">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -37,7 +39,12 @@
         <activity android:name=".activities.EditActivity" />
         <activity android:name=".activities.ViewPostActivity" />
         <activity android:name=".activities.AddNewStory" />
-        <activity android:name=".activities.UrgentEmergency"></activity>
+        <activity android:name=".activities.UrgentEmergency" />
+        <activity android:name=".activities.DefensePostureActivity" />
+        <activity android:name=".activities.DefendingFromFrontActivity" />
+        <activity android:name=".activities.DefendingYourBackActivity" />
+        <activity android:name=".activities.AvoidingConfrontationActivity" />
+        <activity android:name=".activities.QuotesActivity"></activity>
     </application>
 
 </manifest>

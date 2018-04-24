@@ -7,5 +7,13 @@
     tools:context=".navFragments.TriviaFragment">
 
 
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:text="TicTacToe"
+        android:textAllCaps="false"
+        android:id="@+id/tictoc"
+        android:layout_centerInParent="true"/>
+
 
 </RelativeLayout>

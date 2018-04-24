@@ -13,6 +13,7 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 
 import apps.amazon.com.dide.R;
+import apps.amazon.com.dide.activities.MessFragment;
 import apps.amazon.com.dide.activities.UrgentEmergency;
 
 
@@ -80,7 +81,9 @@ public class HomeFragment extends android.app.Fragment{
         getView().findViewById(R.id.dontmess).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                //code goes here!
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.cont, new MessFragment(), "categories");
+                fragmentTransaction.commit();
             }
         });
 
