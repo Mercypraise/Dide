@@ -10,6 +10,37 @@
     <string name="title_activity_twin">TwinActivity</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
+    <!--The string below indicates you can tap anywhere four times to reveal the emergency screen-->
+    <string name="emerge">Rapidly tap the screen 4 times to launch the emergency screen</string>
+
+
+    <!--Position in picture-->
+    <string name="us">L-R Moyinoluwa Agbalajobi, Charity Lamidi, Anjolaoluwa Ogunsina, Kehinde Awotinde, Mercypraise Ninan</string>
+
+    <string name="tic">TicTacToe</string>
+    <string name="email">Email</string>
+    <string name="gender">Gender</string>
+    <string name="number">Phone number</string>
+    <string name="name">Display name</string>
+    <string name="proceed">Proceed to app</string>
+
+    <string name="posture">Maintaining a defensive posture</string>
+    <string name="front_defense">Defending Yourself from the Front</string>
+    <string name="back_defense">Defending Your Back</string>
+    <string name="confront">Avoiding confrontation</string>
+
+
+    <!--These strings are for the home fragment (homepage)-->
+    <string name="dontmess">Don\'t mess with me</string>
+    <string name="feeds">Feeds</string>
+    <string name="quotes">Quotes</string>
+    <string name="report">Report</string>
+    <string name="trivia">Trivia</string>
+    <string name="counsellor">Meet a counsellor</string>
+
+
+    <string name="swipe">Swipe right to continue >></string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

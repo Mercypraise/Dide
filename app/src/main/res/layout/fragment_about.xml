@@ -19,13 +19,12 @@
                 android:layout_height="250dp"
                 android:scaleType="fitXY"
                 android:id="@+id/us"
-                android:padding="10dp"
-                android:src="@drawable/taslim"/>
+                android:src="@drawable/girls"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="L-R Mercypraise Ninan, Kehinde Awotinde, Anjolaoluwa Ogunsina, Charity Lamidi, Moyinoluwa Agbalajobi"
+                android:text="@string/us"
                 android:padding="10dp"
                 android:textSize="13sp"
                 android:id="@+id/names"

@@ -93,7 +93,7 @@
                         android:layout_alignParentStart="true"
                         android:layout_marginStart="15dp"
                         android:gravity="start|top"
-                        android:text="Display name"
+                        android:text="@string/name"
                         android:textColor="@android:color/holo_red_dark"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -124,7 +124,7 @@
                         android:layout_alignParentStart="true"
                         android:layout_marginStart="15dp"
                         android:gravity="start|top"
-                        android:text="Email"
+                        android:text="@string/email"
                         android:textColor="@android:color/holo_red_dark"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -154,7 +154,7 @@
                         android:layout_alignParentStart="true"
                         android:layout_marginStart="15dp"
                         android:gravity="start|top"
-                        android:text="Gender"
+                        android:text="@string/gender"
                         android:textColor="@android:color/holo_red_dark"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -185,7 +185,7 @@
                         android:layout_alignParentStart="true"
                         android:layout_marginStart="15dp"
                         android:gravity="start|top"
-                        android:text="Phone number"
+                        android:text="@string/number"
                         android:textColor="@android:color/holo_red_dark"
                         android:textSize="15sp"
                         android:textStyle="bold" />

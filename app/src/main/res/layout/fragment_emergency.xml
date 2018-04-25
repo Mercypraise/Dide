@@ -51,7 +51,7 @@
                 android:paddingStart="8dp"
                 android:fontFamily="monospace"
                 android:paddingTop="5dp"
-                android:text="Rapidly tap the screen 4 times to launch the emergency screen"
+                android:text="@string/emerge"
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_red_dark"
                 android:textSize="21sp"
@@ -69,7 +69,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="29dp"
-        android:text="Swipe right to continue >>"
+        android:text="@string/swipe"
         android:textColor="#2437a0"
         android:textSize="23sp"
         android:textStyle="bold" />

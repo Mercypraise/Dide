@@ -26,7 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Maintaining a defensive posture"
+                android:text="@string/posture"
                 android:textColor="#ffffff"
                 android:fontFamily="casual"
                 android:textSize="18sp"/>
@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Defending Yourself from the Front"
+                android:text="@string/front_defense"
                 android:textColor="#ffffff"
                 android:fontFamily="casual"
                 android:textSize="18sp"/>
@@ -62,7 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Defending Your Back"
+                android:text="@string/back_defense"
                 android:fontFamily="casual"
                 android:textColor="#ffffff"
                 android:textSize="18sp"/>
@@ -80,7 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Avoiding confrontation"
+                android:text="@string/confront"
                 android:fontFamily="casual"
                 android:textColor="#ffffff"
                 android:textSize="18sp"/>

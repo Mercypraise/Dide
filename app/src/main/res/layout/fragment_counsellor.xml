@@ -39,6 +39,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Contact"
+                    android:id="@+id/contactMercy"
                     android:textAllCaps="false"/>
             </LinearLayout>
         </LinearLayout>
@@ -71,6 +72,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Contact"
+                    android:id="@+id/contactKehinde"
                     android:textAllCaps="false"/>
             </LinearLayout>
         </LinearLayout>
@@ -103,6 +105,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Contact"
+                    android:id="@+id/contactMoyin"
                     android:textAllCaps="false"/>
             </LinearLayout>
         </LinearLayout>
@@ -135,6 +138,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Contact"
+                    android:id="@+id/contactAnjola"
                     android:textAllCaps="false"/>
             </LinearLayout>
         </LinearLayout>
@@ -167,6 +171,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Contact"
+                    android:id="@+id/contactCharity"
                     android:textAllCaps="false"/>
             </LinearLayout>
         </LinearLayout>

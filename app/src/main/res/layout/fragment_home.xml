@@ -50,7 +50,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textColor="#000000"
-                    android:text="Don't mess with me"
+                    android:text="@string/dontmess"
                     android:textSize="15sp"/>
             </android.support.v7.widget.CardView>
 
@@ -67,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textColor="#000000"
-                    android:text="Feeds"
+                    android:text="@string/feeds"
                     android:textSize="15sp"/>
 
             </android.support.v7.widget.CardView>
@@ -96,7 +96,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textColor="#000000"
-                    android:text="Quotes"
+                    android:text="@string/quotes"
                     android:textSize="15sp"/>
 
             </android.support.v7.widget.CardView>
@@ -115,7 +115,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textColor="#000000"
-                    android:text="Report"
+                    android:text="@string/report"
                     android:textSize="15sp"/>
 
             </android.support.v7.widget.CardView>
@@ -144,7 +144,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textColor="#000000"
-                    android:text="Trivia"
+                    android:text="@string/trivia"
                     android:textSize="15sp"/>
             </android.support.v7.widget.CardView>
 
@@ -161,7 +161,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Meet a counsellor"
+                    android:text="@string/counsellor"
                     android:textColor="#000000"
                     android:textSize="15sp" />
             </android.support.v7.widget.CardView>

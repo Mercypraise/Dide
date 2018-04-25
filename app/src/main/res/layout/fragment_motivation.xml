@@ -23,7 +23,7 @@
         android:layout_marginStart="30dp"
         android:background="#a468611a"
         android:fontFamily="casual"
-        android:text="Proceed to app"
+        android:text="@string/proceed"
         android:textAllCaps="false"
         android:textSize="23sp" />
 
