@@ -35,38 +35,51 @@
         </RelativeLayout>
 
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/relic_after_math"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_below="@+id/relic"
+            android:orientation="vertical"
             android:background="#292929">
 
             <TextView
                 android:id="@+id/en"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:gravity="start|top"
+                android:layout_gravity="center|top"
                 android:text="Emergency Number"
                 android:textColor="@android:color/holo_red_dark"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/emergencyNumberCheck"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_centerInParent="true"
-                android:layout_below="@+id/en"
-                android:fontFamily="casual"
-                android:textStyle="bold"
-                android:text="+2347061979046"
-                android:textColor="#ffffff"
-                android:textSize="20sp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/emergencyNumberCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:layout_centerInParent="true"
+                    android:text="+2347061979046"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/edit"
+                    android:id="@+id/editt"
+                    android:background="#292929"
+                    android:layout_marginEnd="11dp"/>
+            </RelativeLayout>
 
 
-        </RelativeLayout>
+        </LinearLayout>
 
 
         <ScrollView
@@ -105,7 +118,6 @@
                         android:layout_centerHorizontal="true"
                         android:fontFamily="casual"
                         android:id="@+id/nameCheck"
-                        android:text="Oseni Taslim"
                         android:textColor="#000000"
                         android:textSize="20sp" />
 
@@ -136,7 +148,6 @@
                         android:layout_centerHorizontal="true"
                         android:fontFamily="casual"
                         android:id="@+id/emailCheck"
-                        android:text="tasleemoseni@gmail.com"
                         android:textColor="#000000"
                         android:textSize="20sp" />
 
@@ -165,7 +176,6 @@
                         android:layout_below="@+id/gd"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="casual"
-                        android:text="male"
                         android:id="@+id/genderCheck"
                         android:textColor="#000000"
                         android:textSize="20sp" />
@@ -196,7 +206,6 @@
                         android:layout_below="@+id/pn"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="casual"
-                        android:text="+2347061979046"
                         android:textColor="#000000"
                         android:id="@+id/numberCheck"
                         android:textSize="20sp" />

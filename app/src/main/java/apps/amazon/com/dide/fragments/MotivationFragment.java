@@ -108,7 +108,7 @@ public class MotivationFragment extends Fragment{
 
         ((ImageView) getView().findViewById(R.id.imageHolder)).setImageResource(quotes[((new Random()).nextInt(quotes.length))]);
 
-        new CountDownTimer(800, 1000){
+        new CountDownTimer(500, 1000){
             @Override
             public void onTick(long millisUntilFinished){
 

@@ -143,7 +143,7 @@ public class EditActivity extends AppCompatActivity{
                             .setPositiveButton("Back to profile", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                                    startActivity(new Intent(getApplicationContext(), HomeActivity.class).putExtra("haa", "profile"));
                                 }
                             })
                             .show();
@@ -207,7 +207,7 @@ public class EditActivity extends AppCompatActivity{
                             .setPositiveButton("Okay", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                                    startActivity(new Intent(getApplicationContext(), HomeActivity.class).putExtra("haa", "profile"));
                                 }
                             })
                             .show();
@@ -251,7 +251,7 @@ public class EditActivity extends AppCompatActivity{
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                        startActivity(new Intent(getApplicationContext(), HomeActivity.class).putExtra("haa", "profile"));
                     }
                 })
                 .setNegativeButton("No", null)

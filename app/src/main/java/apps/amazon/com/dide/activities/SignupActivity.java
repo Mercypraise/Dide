@@ -290,34 +290,30 @@ public class SignupActivity extends AppCompatActivity implements View.OnTouchLis
                             sohowhowhow[4] = ((EditText) findViewById(R.id.numberText)).getText().toString().trim();
                             ++i;
 
-                            switch(i){
-                                case 4:
-                                    nameCard.setVisibility(View.GONE);
-                                    emailCard.setVisibility(View.GONE);
-                                    numberCard.setVisibility(View.GONE);
-                                    genderCard.setVisibility(View.GONE);
-                                    passwordCard.setVisibility(View.VISIBLE);
-                                    break;
-                            }
+                            if(i == 5){
+                                findViewById(R.id.progressBar).setVisibility(View.VISIBLE);
+                                mAuth.createUserWithEmailAndPassword(sohowhowhow[1], sohowhowhow[4]).addOnCompleteListener(new OnCompleteListener<AuthResult>(){
+                                    @Override
+                                    public void onComplete(@NonNull Task<AuthResult> task) {
+                                        if(task.isSuccessful()){
+                                            UserModel newUser = new UserModel(sohowhowhow[0], sohowhowhow[1], sohowhowhow[3], sohowhowhow[2], "07061979046");
+                                            FirebaseUser user = mAuth.getCurrentUser();
+                                            databaseReference.child("users").child(user.getUid()).setValue(newUser).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<Void> task) {
+                                                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                                                }
+                                            });
 
-                        }
-                        break;
-                    case 5:
-                        findViewById(R.id.progressBar).setVisibility(View.VISIBLE);
-                        mAuth.createUserWithEmailAndPassword(sohowhowhow[1], sohowhowhow[4]).addOnCompleteListener(new OnCompleteListener<AuthResult>(){
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if(task.isSuccessful()){
-                                    UserModel newUser = new UserModel(sohowhowhow[0], sohowhowhow[1], sohowhowhow[3], sohowhowhow[2], "07061979046");
-                                    FirebaseUser user = mAuth.getCurrentUser();
-                                    databaseReference.child("users").child(user.getUid()).setValue(newUser);
-                                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-                                }
-                                else{
-                                    Toast.makeText(getApplicationContext(), "Failed, try again", Toast.LENGTH_LONG).show();
-                                }
+                                        }
+                                        else{
+                                            findViewById(R.id.progressBar).setVisibility(View.GONE);
+                                            Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                        }
+                                    }
+                                });
                             }
-                        });
+                        }
                         break;
                 }
 

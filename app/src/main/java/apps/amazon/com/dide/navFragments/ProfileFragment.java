@@ -110,6 +110,7 @@ public class ProfileFragment extends android.app.Fragment{
 
         name = getView().findViewById(R.id.nameCheck);
         number = getView().findViewById(R.id.numberCheck);
+        email = getView().findViewById(R.id.emailCheck);
         gender = getView().findViewById(R.id.genderCheck);
         emergencyNumber = getView().findViewById(R.id.emergencyNumberCheck);
         image = getView().findViewById(R.id.image);
@@ -121,15 +122,12 @@ public class ProfileFragment extends android.app.Fragment{
             }
         });
 
-        Snackbar.make(getActivity().findViewById(android.R.id.content), "", Snackbar.LENGTH_LONG)
-                .setAction("Tap to edit your profile", new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v){
-                        startActivity(new Intent(getActivity().getApplicationContext(), EditActivity.class));
-                    }
-                })
-                .setDuration(1200000)
-                .show();
+        getView().findViewById(R.id.editt).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity().getApplicationContext(), EditActivity.class));
+            }
+        });
 
 
         if(!isNetworkAvailable()){
@@ -209,10 +207,12 @@ public class ProfileFragment extends android.app.Fragment{
                 UserModel userTree = dataSnapshot.getValue(UserModel.class);
 
                 getView().findViewById(R.id.progressBar).setVisibility(View.GONE);
+                getView().findViewById(R.id.root).setVisibility(View.VISIBLE);
 
                 name.setText(userTree.getDisplayName());
                 email.setText(userTree.getEmail());
                 gender.setText(userTree.getGender());
+                number.setText(userTree.getpNumber());
                 emergencyNumber.setText(userTree.getEmergencyNumber());
 
                 if(userTree.getGender().trim().toLowerCase().equals("male")){
@@ -257,5 +257,7 @@ public class ProfileFragment extends android.app.Fragment{
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null;
     }
+
+
 
     }

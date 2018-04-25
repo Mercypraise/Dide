@@ -24,6 +24,7 @@
         android:background="#a468611a"
         android:fontFamily="casual"
         android:text="@string/proceed"
+        android:textStyle="bold"
         android:textAllCaps="false"
         android:textSize="23sp" />
 

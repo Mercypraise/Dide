@@ -2,13 +2,13 @@ package apps.amazon.com.dide.models;
 
 public class UserModel{
 
-    public String displayname, email, pNumber, gender, emergencyNumber;
+    public String displayName, email, pNumber, gender, emergencyNumber;
 
     public UserModel() {
     }
 
-    public UserModel(String displayname, String email, String pNumber, String gender, String emergencyNumber){
-        this.displayname = displayname;
+    public UserModel(String displayName, String email, String pNumber, String gender, String emergencyNumber){
+        this.displayName = displayName;
         this.email = email;
         this.pNumber = pNumber;
         this.gender = gender;
@@ -17,7 +17,7 @@ public class UserModel{
 
 
     public String getDisplayName(){
-        return displayname;
+        return displayName;
     }
 
     public String getEmergencyNumber(){

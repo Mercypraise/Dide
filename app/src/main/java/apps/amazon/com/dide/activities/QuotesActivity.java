@@ -43,6 +43,9 @@ public class QuotesActivity extends AppCompatActivity{
                     @Override
                     public void onClick(View v){
                         ++i;
+                        if(i >= quotes.length){
+                            i = 0;
+                        }
                         findViewById(R.id.imageHolder).setBackgroundResource(quotes[i]);
 
                     }
@@ -52,6 +55,9 @@ public class QuotesActivity extends AppCompatActivity{
                     @Override
                     public void onClick(View v) {
                         --i;
+                        if(i < 0){
+                            i = quotes.length - 1;
+                        }
                         findViewById(R.id.imageHolder).setBackgroundResource(quotes[i]);
                     }
                 });

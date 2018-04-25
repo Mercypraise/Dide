@@ -8,12 +8,31 @@
     tools:context=".navFragments.FeedsFragment">
 
 
-    <android.support.v7.widget.RecyclerView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/feeds">
+        android:id="@+id/groot"
+        android:layout_height="match_parent">
 
-    </android.support.v7.widget.RecyclerView>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/feeds">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/addNewStory"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="40dp"
+            android:layout_marginEnd="40dp"
+            android:src="@android:drawable/ic_input_add"
+            app:backgroundTint="#298481" />
+    </RelativeLayout>
+
 
     <ProgressBar
         android:layout_width="wrap_content"
@@ -22,14 +41,4 @@
         android:id="@+id/progressBar"
         android:visibility="gone"/>
 
-    <android.support.design.widget.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/addNewStory"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="40dp"
-        android:layout_marginEnd="40dp"
-        android:src="@android:drawable/ic_input_add"
-        app:backgroundTint="#298481" />
 </RelativeLayout>

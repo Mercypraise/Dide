@@ -42,12 +42,21 @@ public class UrgentEmergency extends AppCompatActivity {
 
                     ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.CALL_PHONE}, 101);
 
-                }
+
                     SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                     String number = settings.getString("emergency", "09080515774");
                     Intent intent = new Intent(Intent.ACTION_CALL);
                     intent.setData(Uri.parse("tel:" + number));
                     startActivity(intent);
+                }
+                else{
+                    SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                    String number = settings.getString("emergency", "09080515774");
+                    Intent intent = new Intent(Intent.ACTION_CALL);
+                    intent.setData(Uri.parse("tel:" + number));
+                    startActivity(intent);
+                }
+
 
 
             }

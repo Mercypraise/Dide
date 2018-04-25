@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 import apps.amazon.com.dide.R;
+import apps.amazon.com.dide.navFragments.DonationFragment;
 import apps.amazon.com.dide.navFragments.FAQFragment;
 import apps.amazon.com.dide.navFragments.TicTacToeFragment;
 import apps.amazon.com.dide.navFragments.AboutFragment;
@@ -51,12 +52,21 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             getSupportActionBar().setTitle("");
         }
 
+
         else if((getIntent().getStringExtra("HAA") != null) && getIntent().getStringExtra("HAA").equals("game")){
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.cont, new TriviaFragment(), "game");
             fragmentTransaction.commit();
             getSupportActionBar().setTitle("");
         }
+
+        else if((getIntent().getStringExtra("haa") != null) && getIntent().getStringExtra("haa").equals("profile")){
+            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.cont, new ProfileFragment(), "profile");
+            fragmentTransaction.commit();
+            getSupportActionBar().setTitle("");
+        }
+
 
         else{
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
@@ -143,26 +153,38 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             drawer.closeDrawer(GravityCompat.START);
         }
 
-        else if(id == R.id.nav_rate){
+//        else if(id == R.id.nav_rate){
+//            DrawerLayout drawer = findViewById(R.id.drawer_layout);
+//            drawer.closeDrawer(GravityCompat.START);
+//
+//            new AlertDialog.Builder(this)
+//                    .setTitle("Rate this app on Google Play Store?")
+//                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialog, int which) {
+//                            Toast.makeText(getApplicationContext(), "This setting has not been added yet, sorry ehn", Toast.LENGTH_LONG).show();
+//                        }
+//                    })
+//                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialog, int which) {
+//
+//                        }
+//                    })
+//                    .show();
+//        }
+
+        else if(id == R.id.nav_donation){
+            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.cont, new DonationFragment(), "donation");
+            fragmentTransaction.commit();
+
+
             DrawerLayout drawer = findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
-
-            new AlertDialog.Builder(this)
-                    .setTitle("Rate this app on Google Play Store?")
-                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            Toast.makeText(getApplicationContext(), "This setting has not been added yet, sorry ehn", Toast.LENGTH_LONG).show();
-                        }
-                    })
-                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-
-                        }
-                    })
-                    .show();
         }
+
+
 
         else if(id == R.id.profile){
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();

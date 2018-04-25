@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c170e9"
+    tools:context=".navFragments.DonationFragment">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/te"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Volountary donations are welcome for the cause of helping victims get rehabilitation."
+            android:textAlignment="center"
+            android:textSize="25sp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/te"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:text="To donate, contact:\n\ndide.theamazons@gmail.com\n+2349080515774"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="21sp" />
+    </RelativeLayout>
+</RelativeLayout>

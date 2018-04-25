@@ -62,7 +62,7 @@ public class FeedsFragment extends android.app.Fragment {
         mAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
-        getView().findViewById(R.id.root).setVisibility(View.GONE);
+        getView().findViewById(R.id.groot).setVisibility(View.GONE);
         getView().findViewById(R.id.progressBar).setVisibility(View.VISIBLE);
 
         getView().findViewById(R.id.addNewStory).setOnClickListener(new View.OnClickListener() {
@@ -202,6 +202,7 @@ public class FeedsFragment extends android.app.Fragment {
 
             @Override
             public void onSuccess(DataSnapshot dataSnapshot){
+                getView().findViewById(R.id.groot).setVisibility(View.VISIBLE);
                 getView().findViewById(R.id.progressBar).setVisibility(View.GONE);
 
                 ArrayList<PostModel> models = new ArrayList<>();
@@ -212,7 +213,7 @@ public class FeedsFragment extends android.app.Fragment {
                 }
 
                 if(models.isEmpty()){
-                    new AlertDialog.Builder(getActivity().getApplicationContext())
+                    new AlertDialog.Builder(getActivity())
                             .setTitle("No stories, create one?")
                             .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                 @Override
