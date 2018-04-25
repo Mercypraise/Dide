@@ -7,5 +7,122 @@
     tools:context=".navFragments.FAQFragment">
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_centerVertical="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Where does my report go to?"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/one"
+                android:textColor="@android:color/holo_red_dark"
+                android:textAlignment="center"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How fast would I get a reply?"
+                android:textSize="20sp"
+                android:id="@+id/two"
+                android:layout_marginTop="21dp"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textAlignment="center"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Is my identity really confidential?"
+                android:textSize="20sp"
+                android:id="@+id/three"
+                android:textColor="@android:color/holo_orange_light"
+                android:layout_marginTop="21dp"
+                android:textAlignment="center"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Is harrasment restricted to only rape?"
+                android:textSize="20sp"
+                android:id="@+id/four"
+                android:layout_marginTop="21dp"
+                android:textColor="@android:color/holo_green_dark"
+                android:textAlignment="center"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What's the purpose of the live feeds?"
+                android:textSize="20sp"
+                android:id="@+id/five"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_marginTop="21dp"
+                android:textAlignment="center"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Who are the Amazons?"
+                android:textSize="20sp"
+                android:id="@+id/six"
+                android:layout_marginTop="21dp"
+                android:textAlignment="center"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Why the name \'Dide\'?"
+                android:textSize="20sp"
+                android:id="@+id/seven"
+                android:textColor="@android:color/holo_purple"
+                android:layout_marginTop="21dp"
+                android:textAlignment="center"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What's the emergency tap and sound for?"
+                android:textSize="20sp"
+                android:id="@+id/eight"
+                android:layout_marginTop="21dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:textAlignment="center"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Is Dide only for females?"
+                android:textSize="20sp"
+                android:layout_marginTop="21dp"
+                android:id="@+id/nine"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textAlignment="center"/>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Who are the counsellors?"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="20sp"
+                android:layout_marginTop="21dp"
+                android:layout_marginBottom="30dp"
+                android:id="@+id/ten"
+                android:textAlignment="center"/>
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

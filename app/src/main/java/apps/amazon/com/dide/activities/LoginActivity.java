@@ -86,10 +86,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnTouchList
         });
     }
 
-    @Override
-    public void onBackPressed() {
-        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-    }
+
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {

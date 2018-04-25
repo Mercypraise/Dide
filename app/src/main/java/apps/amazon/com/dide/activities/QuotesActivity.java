@@ -1,6 +1,7 @@
 package apps.amazon.com.dide.activities;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import apps.amazon.com.dide.R;
 public class QuotesActivity extends AppCompatActivity{
 
     int i = 0;
+    MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -21,15 +23,20 @@ public class QuotesActivity extends AppCompatActivity{
         setContentView(R.layout.activity_quotes);
 
 
+        mp = MediaPlayer.create(this, R.raw.quote_sound);
+        mp.setLooping(true);
+        mp.start();
+
+
         final int[] quotes = {R.drawable.b1, R.drawable.b3, R.drawable.b4, R.drawable.b6,
                 R.drawable.b10, R.drawable.b18, R.drawable.b19, R.drawable.b21,
                 R.drawable.b22, R.drawable.b23, R.drawable.b28,
-                R.drawable.b30, R.drawable.b31, R.drawable.b34, R.drawable.b35};
+                R.drawable.b30, R.drawable.b31, R.drawable.b35};
 
         findViewById(R.id.imageHolder).setBackgroundResource(quotes[i]);
 
 
-        new CountDownTimer(3000, 1000){
+        new CountDownTimer(2000, 1000){
             @Override
             public void onTick(long millisUntilFinished){
                 findViewById(R.id.next).setOnClickListener(new View.OnClickListener(){
@@ -107,4 +114,20 @@ public class QuotesActivity extends AppCompatActivity{
         });
 
     }
+
+
+    @Override
+    public void onBackPressed(){
+        mp.pause();
+        super.onBackPressed();
+    }
+
+
+    @Override
+    protected void onStop() {
+        mp.pause();
+        super.onStop();
+    }
+
+
 }

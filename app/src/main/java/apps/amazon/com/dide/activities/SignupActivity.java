@@ -36,7 +36,6 @@ public class SignupActivity extends AppCompatActivity implements View.OnTouchLis
     CardView nameCard, emailCard, numberCard, genderCard, passwordCard;
     int i = 0;
     Handler handler = new Handler();
-
     int numberOfTaps = 0;
     long lastTapTimeMs = 0;
     long touchDownMs = 0;
@@ -360,4 +359,5 @@ public class SignupActivity extends AppCompatActivity implements View.OnTouchLis
 
         return true;
     }
+
 }

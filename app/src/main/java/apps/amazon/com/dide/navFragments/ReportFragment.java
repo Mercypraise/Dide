@@ -11,6 +11,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import apps.amazon.com.dide.R;
 import apps.amazon.com.dide.activities.UrgentEmergency;
@@ -76,6 +78,24 @@ public class ReportFragment extends android.app.Fragment{
                 }
 
                 return true;
+            }
+        });
+
+        getView().findViewById(R.id.submit).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("message/rfc822");
+                i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"dide.theamazons@gmail.com"});
+                i.putExtra(Intent.EXTRA_SUBJECT, "Case Report");
+                i.putExtra(Intent.EXTRA_TEXT   , "From" + ((EditText) getView().findViewById(R.id.nameLink)).getText().toString().trim() +" a user of the \'Dide\' app\n\n\n"+ ((EditText) getView().findViewById(R.id.body)).getText().toString() +"\n\nThis individual can be reached on email: " +((EditText) getView().findViewById(R.id.mailLink)).getText().toString() +" or phone number: "+((EditText) getView().findViewById(R.id.numberLink)).getText().toString());
+
+                try {
+                    startActivity(Intent.createChooser(i, "Send mail..."));
+                }
+                catch(android.content.ActivityNotFoundException ex) {
+                    Toast.makeText(getActivity(), "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

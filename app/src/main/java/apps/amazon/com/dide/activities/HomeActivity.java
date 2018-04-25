@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 import apps.amazon.com.dide.R;
+import apps.amazon.com.dide.navFragments.FAQFragment;
 import apps.amazon.com.dide.navFragments.TicTacToeFragment;
 import apps.amazon.com.dide.navFragments.AboutFragment;
 import apps.amazon.com.dide.navFragments.HomeFragment;
@@ -61,7 +62,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.cont, new HomeFragment(), "home");
             fragmentTransaction.commit();
-            getSupportActionBar().setTitle("Home");
+            getSupportActionBar().setTitle("");
         }
 
 
@@ -107,7 +108,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.cont, new HomeFragment(), "home");
                 fragmentTransaction.commit();
-                getSupportActionBar().setTitle("Home");
             }
         }
     }
@@ -139,8 +139,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             fragmentTransaction.replace(R.id.cont, new AboutFragment(), "about");
             fragmentTransaction.commit();
 
-            getSupportActionBar().setTitle("About");
-
             DrawerLayout drawer = findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
         }
@@ -171,7 +169,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             fragmentTransaction.replace(R.id.cont, new ProfileFragment(), "profile");
             fragmentTransaction.commit();
 
-            getSupportActionBar().setTitle("Profile");
 
             DrawerLayout drawer = findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
@@ -184,8 +181,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
             DrawerLayout drawer = findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
-
-            getSupportActionBar().setTitle("Stories");
         }
 
         else if(id == R.id.trivia){
@@ -196,14 +191,16 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             DrawerLayout drawer = findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
 
-            getSupportActionBar().setTitle("Trivia");
         }
 
 
         else if(id == R.id.faq){
+            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.cont, new FAQFragment(), "faq");
+            fragmentTransaction.commit();
+
             DrawerLayout drawer = findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
-            Toast.makeText(getApplicationContext(), "This setting has not been added yet, sorry ehn", Toast.LENGTH_LONG).show();
         }
 
 
