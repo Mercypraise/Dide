@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
+import android.widget.TextView;
 
 import apps.amazon.com.dide.R;
 
@@ -60,5 +61,10 @@ public class ViewPostActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        ((TextView) findViewById(R.id.title)).setText(getIntent().getStringExtra("TITLE"));
+        ((TextView) findViewById(R.id.author)).setText(getIntent().getStringExtra("AUTHOR"));
+        ((TextView) findViewById(R.id.content)).setText(getIntent().getStringExtra("MESSAGE"));
     }
+
 }

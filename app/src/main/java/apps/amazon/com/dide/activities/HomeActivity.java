@@ -138,16 +138,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        int id = item.getItemId();
-
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -163,26 +153,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             drawer.closeDrawer(GravityCompat.START);
         }
 
-//        else if(id == R.id.nav_rate){
-//            DrawerLayout drawer = findViewById(R.id.drawer_layout);
-//            drawer.closeDrawer(GravityCompat.START);
-//
-//            new AlertDialog.Builder(this)
-//                    .setTitle("Rate this app on Google Play Store?")
-//                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
-//                            Toast.makeText(getApplicationContext(), "This setting has not been added yet, sorry ehn", Toast.LENGTH_LONG).show();
-//                        }
-//                    })
-//                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
-//
-//                        }
-//                    })
-//                    .show();
-//        }
 
         else if(id == R.id.nav_donation){
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();

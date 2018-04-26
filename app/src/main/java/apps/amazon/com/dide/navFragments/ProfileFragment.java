@@ -125,7 +125,12 @@ public class ProfileFragment extends android.app.Fragment{
         getView().findViewById(R.id.editt).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity().getApplicationContext(), EditActivity.class));
+                Bundle bundle = new Bundle();
+                bundle.putString("NAME", name.getText().toString());
+                bundle.putString("NUMBER", number.getText().toString());
+                bundle.putString("EMAIL", email.getText().toString());
+                bundle.putString("EMERGENCY", emergencyNumber.getText().toString());
+                startActivity(new Intent(getActivity().getApplicationContext(), EditActivity.class).putExtras(bundle));
             }
         });
 

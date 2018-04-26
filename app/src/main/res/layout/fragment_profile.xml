@@ -64,7 +64,6 @@
                     android:fontFamily="casual"
                     android:textStyle="bold"
                     android:layout_centerInParent="true"
-                    android:text="+2347061979046"
                     android:textColor="#ffffff"
                     android:textSize="20sp" />
 
@@ -73,6 +72,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:src="@drawable/edit"
+                    android:layout_marginBottom="7dp"
                     android:id="@+id/editt"
                     android:background="#292929"
                     android:layout_marginEnd="11dp"/>

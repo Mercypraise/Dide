@@ -36,6 +36,11 @@ public class EditActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
 
+        String namee = getIntent().getStringExtra("NAME");
+        String emaile = getIntent().getStringExtra("NUMBER");
+        String numbere = getIntent().getStringExtra("EMAIL");
+        String emergee = getIntent().getStringExtra("EMERGENCY");
+
         final Context context = this;
         mAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
@@ -49,6 +54,11 @@ public class EditActivity extends AppCompatActivity{
         email = findViewById(R.id.editTextForEmail);
         number = findViewById(R.id.editTextForNumber);
         emergency = findViewById(R.id.editTextForEmergency);
+
+        name.setText(namee);
+        email.setText(emaile);
+        number.setText(numbere);
+        emergency.setText(emergee);
 
         skip = findViewById(R.id.skip);
         next = findViewById(R.id.next);
@@ -246,7 +256,7 @@ public class EditActivity extends AppCompatActivity{
 
     @Override
     public void onBackPressed() {
-        new AlertDialog.Builder(getApplicationContext())
+        new AlertDialog.Builder(this)
                 .setTitle("Back to profile")
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
