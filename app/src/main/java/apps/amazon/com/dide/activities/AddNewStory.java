@@ -2,6 +2,7 @@ package apps.amazon.com.dide.activities;
 
 import android.app.AlertDialog;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Handler;
@@ -45,6 +46,8 @@ public class AddNewStory extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_story);
+
+        final Context context = this;
 
         title = findViewById(R.id.titleField);
         content = findViewById(R.id.contentField);
@@ -103,10 +106,15 @@ public class AddNewStory extends AppCompatActivity {
                 if(title.getText().toString().trim().equals("")){
                     title.setError("Title cannot be empty");
                 }
+                else if(title.getText().toString().length() > 20){
+                    title.setError("Title is too long");
+                }
                 else if(content.getText().toString().trim().equals("")){
                     content.setError("Content cannot be empty");
                 }
                 else{
+                    findViewById(R.id.progressBar).setVisibility(View.VISIBLE);
+
                     final ArrayList<String> comments = new ArrayList<>();
                     comments.add("null");
                     final ArrayList<String> commenters = new ArrayList<>();
@@ -122,14 +130,12 @@ public class AddNewStory extends AppCompatActivity {
                             public void onComplete(@NonNull Task<Void> task){
                                 findViewById(R.id.progressBar).setVisibility(View.GONE);
                                 if(task.isSuccessful()){
-                                    new AlertDialog.Builder(getApplicationContext())
+                                    new AlertDialog.Builder(context)
                                             .setTitle("Successful!")
                                             .setPositiveButton("Okay", new DialogInterface.OnClickListener() {
                                                 @Override
                                                 public void onClick(DialogInterface dialog, int which) {
-                                                    FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                                                    fragmentTransaction.replace(R.id.cont, new FeedsFragment(), "feeds");
-                                                    fragmentTransaction.commit();
+                                                    startActivity(new Intent(getApplicationContext(), HomeActivity.class).putExtra("haa", "feeds"));
                                                 }
                                             })
                                             .show();

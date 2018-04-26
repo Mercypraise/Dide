@@ -28,9 +28,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position){
-        holder.author.setText(posts.get(position).getAuthor());
+        holder.author.setText(String.format("~%s", posts.get(position).getAuthor()));
         holder.title.setText(posts.get(position).getTitle());
-        holder.itemView.setTag(1, ((Integer) position));
+//        holder.itemView.setTag(1, ((Integer) position));
 //        getPos.getPositi(position);
     }
 
@@ -50,10 +50,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         return new MyViewHolder(v);
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class MyViewHolder extends RecyclerView.ViewHolder{
 
         public TextView author, title;
-        private int position;
+//        private int position;
 
 //        @Override
 //        public void getPositi(int position){
@@ -65,15 +65,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
             author = itemView.findViewById(R.id.author);
             title  = itemView.findViewById(R.id.title);
-            position = (Integer) itemView.getTag(1);
-            itemView.setOnClickListener(this);
+//            position = (Integer) itemView.getTag(1);
+//            itemView.setOnClickListener(this);
         }
 
-
-        @Override
-        public void onClick(View v){
-            context.startActivity(new Intent(context, ViewPostActivity.class).putExtra("ID", posts.get(position).getId()));
-        }
+//
+//        @Override
+//        public void onClick(View v){
+//            context.startActivity(new Intent(context, ViewPostActivity.class).putExtra("ID", posts.get(position).getId()));
+//        }
     }
 
 //    public interface getPos{

@@ -60,6 +60,15 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             getSupportActionBar().setTitle("");
         }
 
+
+        else if((getIntent().getStringExtra("haa") != null) && getIntent().getStringExtra("haa").equals("feeds")){
+            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.cont, new FeedsFragment(), "feeds");
+            fragmentTransaction.commit();
+            getSupportActionBar().setTitle("");
+        }
+
+
         else if((getIntent().getStringExtra("haa") != null) && getIntent().getStringExtra("haa").equals("profile")){
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.cont, new ProfileFragment(), "profile");
@@ -109,6 +118,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         }.start();
                         break;
                     case 1:
+                        this.finish();
                         startActivity(new Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_HOME).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                         break;
                 }

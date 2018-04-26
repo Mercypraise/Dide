@@ -36,7 +36,7 @@ public class QuotesActivity extends AppCompatActivity{
         findViewById(R.id.imageHolder).setBackgroundResource(quotes[i]);
 
 
-        new CountDownTimer(2000, 1000){
+        new CountDownTimer(5000, 1000){
             @Override
             public void onTick(long millisUntilFinished){
                 findViewById(R.id.next).setOnClickListener(new View.OnClickListener(){

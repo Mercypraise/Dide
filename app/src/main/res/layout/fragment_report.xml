@@ -73,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/holo_red_dark"
                     android:layout_marginStart="10dp"
-                    android:text="How do you wan to be reached?"/>
+                    android:text="How do you want to be reached?"/>
 
                 <EditText
                     android:layout_width="match_parent"

@@ -48,7 +48,7 @@ public class MotivationFragment extends Fragment{
         getView().findViewById(R.id.btn_proceed).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity().getApplicationContext(), HomeActivity.class));
+                startActivity(new Intent(getActivity().getApplicationContext(), HomeActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
             }
         });
 

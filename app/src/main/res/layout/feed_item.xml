@@ -27,8 +27,7 @@
         android:layout_gravity="bottom"
         android:paddingStart="13dp"
         android:id="@+id/title"
-        android:text="My moment at the lake"
-        android:textSize="25sp" />
+        android:textSize="21sp" />
 
 
 </android.support.v7.widget.CardView>

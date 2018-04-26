@@ -18,27 +18,23 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import java.util.ArrayList;
-
 import apps.amazon.com.dide.R;
 import apps.amazon.com.dide.activities.AddNewStory;
 import apps.amazon.com.dide.activities.HomeActivity;
 import apps.amazon.com.dide.activities.InterludeActivity;
-import apps.amazon.com.dide.activities.LoginActivity;
 import apps.amazon.com.dide.activities.UrgentEmergency;
 import apps.amazon.com.dide.adapters.RecyclerAdapter;
 import apps.amazon.com.dide.models.PostModel;
 
 
-public class FeedsFragment extends android.app.Fragment {
+public class FeedsFragment extends android.app.Fragment{
 
     FirebaseAuth mAuth;
     DatabaseReference databaseReference;
