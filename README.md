@@ -3,8 +3,7 @@
 An app that offers counselling to victims of rape through an anonymous chat platform. The app also has an emergency feature where users can contact emergency by rapidly tapping their screen four or more times.
 
 
-Authors: Mercypraise Ninan, Charity Lamidi, Moyin Agba, Anjola Ogunsina, Kehinde Awotinde, Taslim Oseni
-==========================================================================
+### Authors: Mercypraise Ninan, Charity Lamidi, Moyin Agba, Anjola Ogunsina, Kehinde Awotinde, Taslim Oseni
 
 
 ### Requirements:
